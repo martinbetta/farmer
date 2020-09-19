@@ -17,3 +17,17 @@
   opacity: 1;
   border-bottom: 3px solid #555555;
 }
+
+.product-container {
+  display: flex;
+  padding-top: 25px
+}
+
+.info-container {
+  margin-left: 40px
+}
+
+.carousel-item img {
+  border-radius: 10px;
+}
+
