@@ -66,12 +66,6 @@ const slide = () => {
   });
 };
 
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-  slide();
-});
-
 const toggleSidebar = () => {
   const checkbox = document.querySelector('#slide')
   const toggle = document.querySelector('#toggle')
@@ -82,6 +76,13 @@ const toggleSidebar = () => {
   };
 };
 
-$("#slide").on("click tap", function() {
-  toggleSidebar();
+document.addEventListener('turbolinks:load', () => {
+  slide();
+  $("#slide").on("click tap", function() {
+    toggleSidebar();
+  });
 });
+
+
+
+
