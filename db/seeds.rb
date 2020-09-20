@@ -9,8 +9,10 @@
 require 'faker'
 CATEGORIES = ['Fruits', 'Vegetables','Breads', 'Milk and Eggs', 'Juices', 'Wines', 'Boxes & Packs', 'Other']
 
-Product.destroy_all
 VendorInfo.destroy_all
+OrderItem.destroy_all
+Product.destroy_all
+Order.destroy_all
 User.destroy_all
 
 5.times do |i|
@@ -49,4 +51,22 @@ end
     address: Faker::Address.street_address,
     role: 0
   )
+
+  3.times do
+    order = Order.create(
+      status: "pending",
+      user: user,
+      confirmation_date: Date.today,
+      delivery_date: Date.today + 5
+    )
+
+    3.times do |o|
+      orderitem = OrderItem.create!(
+        price: rand(1..40),
+        quantity: rand(1..10),
+        product: Product.all.sample,
+        order: order
+      )
+    end
+  end
 end
