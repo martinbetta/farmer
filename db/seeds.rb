@@ -27,7 +27,7 @@ User.destroy_all
     company_name: Faker::Company.name,
     user: user
   )
-  3.times do
+  5.times do
     product = Product.new(
       name: Faker::Food.fruits,
       description: Faker::Food.description,
