@@ -24,7 +24,7 @@
     </div>
 
     <div class="info-container">
-      <h2 class="product-header"><%= @product.name %></h2>
+      <h1 class="product-header"><%= @product.name %></h1>
 
       <div class="address-review-container">
         <h6><%= @product.user.address %></h6>
@@ -36,12 +36,12 @@
       </div>
 
       <div class="price-container d-flex">
-        <h6 class="price-container"><strong>Price &emsp;&emsp; </strong></h6>
+        <h5 class="price-container">Price:&emsp;</h5>
         <h5>€ <%= @product.unit_price %> x <%= @product.unit %></h5>
       </div>
 
       <div class="quantity-container">
-        <h6><strong>Qty</strong></h6>
+        <h5><strong>Qty</strong></h5>
         <%= simple_form_for [@product, @order_item], remote: true do |f| %>
           <div class="def-number-input number-input">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
