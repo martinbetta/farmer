@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
 
+
   def index
     if params[:query].present?
-
-      @products = Product.search_for(params[:query])
+      @products = Product.where(category: params[:query])
     else
       @products = Product.all
     end
@@ -12,6 +12,5 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
-
 
 end
