@@ -1,0 +1,30 @@
+.grid-cat {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.category-card {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2px;
+  color: white;
+  font-size: 14px;
+  text-align: bottom;
+  position: relative;
+  box-shadow: 2px 2px 14px -5px rgba(0,0,0,0.75);
+  a {
+    text-decoration: none;
+  }
+}
+
+.category-card p {
+  padding: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+  text-shadow: 0.5px 0.5px 0px #3d3c38;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+ <h1>Find your product</h1>
+  <div class="row">
+
+    <div class="col-8">
+      <% @products.each do |product| %>
+        <div class="product-card">
+          <div>
+            <img src="">
+          </div>
+          <div class="product-info">
+            <%= product.name %>
+            <%= product.category %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-4">
+      <div class="grid-cat">
+        <% Product::CATEGORIES.each do |category|  %>
+          <a href="/products?query=#{catergory}">
+          <div class="category-card" style="background-image: url(<%= asset_path("#{category.tr(" ","_")}.jpg") %>)">
+            <p> <%= category %> </p>
+          </div>
+          </a>
+        <% end %>
+      </div> <!---- closing the grid-cat div ---->
+    </div> <!---- closing the col-3 ---->
+  </div> <!---- closing the row div ---->
+</div> <!---- closing the container div ---->
