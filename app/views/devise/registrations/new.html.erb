@@ -1,0 +1,48 @@
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+  <!-- <a href="/users/sign_up?role=vendor">
+    I'm a vendor
+  </a> -->
+  <div class="form-inputs">
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :first_name,
+                required: true,
+                input_html: { autocomplete: "first-name" } %>
+    <%= f.input :last_name,
+                required: true,
+                input_html: { autocomplete: "last-name" } %>
+    <%= f.input :address,
+                required: true,
+                input_html: { autocomplete: "address" } %>
+
+    <%# if params[:role] == "vendor" %>
+      <%#= f.input :role,
+                  as: :hidden,
+                  required: true,
+                  input_html: { autocomplete: "role", value: 1 } %>
+    <%# else %>
+      <%= f.input :role,
+                  required: true,
+                  as: :hidden,
+                  input_html: { autocomplete: "role", value: :buyer } %>
+    <%# end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
