@@ -1,0 +1,16 @@
+.banner {
+    background: linear-gradient(90deg, rgba(182,235,122,0.5) 0%, rgba(255,81,38,0.5) 100%), url(bg.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-text {
+    padding: 150px 0px;
+}
+.banner-text h1, p {
+    font-weight: bold;
+    color: white;
+}
+.banner-text p:nth-child(3) {
+    margin-top: 50px;
+}

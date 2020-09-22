@@ -1,0 +1,57 @@
+
+
+/* NAV BTN */
+
+.sign-in-btn a {
+    background-color: $orange;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.sign-in-btn a:hover {
+    -webkit-box-shadow: 0px 0px 19px -1px rgba(255,81,38,1);
+    -moz-box-shadow: 0px 0px 19px -1px rgba(255,81,38,1);
+    box-shadow: 0px 0px 19px -1px rgba(255,81,38,1);
+}
+
+.sign-up-btn a {
+    background-color: $green;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.sign-up-btn a:hover {
+    -webkit-box-shadow: 0px 0px 19px -1px rgba(182,235,122,1);
+    -moz-box-shadow: 0px 0px 19px -1px rgba(182,235,122,1);
+    box-shadow: 0px 0px 19px -1px rgba(182,235,122,1);
+}
+
+
+.sign-out-btn a {
+    background-color: #3e3636;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-btn a {
+    color: black;
+    text-decoration: none;
+}
+
+/*  BANNER btn  */
+
+.banner-text p a {
+    background-color: $orange;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    margin-top: 50px;
+    font-weight: normal;
+}
