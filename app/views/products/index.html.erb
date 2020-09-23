@@ -24,7 +24,7 @@
       <div class="grid-cat">
         <% Product::CATEGORIES.each do |category|  %>
           <a href='/products?search=<%= category %>'>
-          <div class="category-card" style="background-image: url(<%= asset_path("#{category.tr(" ","_")}.png") %>)">
+          <div class="category-card" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)">
           </div>
           <p class="category-name"> <%= category %> </p>
           </a>
