@@ -6,11 +6,13 @@ class User < ApplicationRecord
 
   # enum status: [ :user, :producer ]
 
+
   has_many :orders
   has_many :products
   has_one :vendor_info
   validates :first_name, :last_name, :address, :role, presence: true
 
+  #delegate :company_name, to: :vendor_info
   enum role: [ :buyer, :vendor ]
 
   accepts_nested_attributes_for :vendor_info
