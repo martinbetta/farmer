@@ -9,7 +9,7 @@
 
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
-      <a href="/users/sign_up?role=vendor">
+      <a href="/users/sign_up?role=vendor" id="vendor-registration">
         I'm a vendor
       </a>
       <div class="form-inputs">
@@ -65,7 +65,6 @@
     <% end %>
   </div>
   <div class="wrapper-2-sign-in-up">
-    <%= image_tag("https://a0.muscache.com/airbnb/static/packages/start.b12a70f6.png") %>
   </div>
 </div>
 
