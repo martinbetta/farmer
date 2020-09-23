@@ -4,16 +4,15 @@
 
 .sign-in-btn a,
 .sign-up-btn a,
-.sign-out-btn a {
+.sign-out-btn a,
+.dashboard a {
     color: black;
     font-weight: bold;
     text-decoration: none;
-    
 }
 
-
 .banner-text p a {
-    background-color: $orange;
+    background-color: $red;
     padding: 10px 15px;
     border-radius: 5px;
     color: white;

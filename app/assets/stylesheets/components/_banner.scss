@@ -1,25 +1,40 @@
+/*  First banner  */
+
 .banner {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(bg.png);
-    height: 500px;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%), url(bg4.jpg);
+    height: 88vh;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom right;
 }
 .banner-text {
-    padding: 150px 0px;
+    padding: 190px 0px;
 }
 .banner-text h1, 
 .banner-text p {
     font-weight: bold;
-    color: white;
+    color: $light-gray;
 }
 .banner-text p:nth-child(3) {
     margin-top: 50px;
 }
 
-/*  Secondary banner*/
+
+
+/*  Second banner*/
 
 .secondary-banner {
-    background: linear-gradient(180deg, rgba(255,81,38,1) 0%, rgba(255,255,255,0.76234243697479) 100%);
+    background: #FBF33C;
+    background: -webkit-linear-gradient(45deg, #119DA4, #04B46D ,  #FBF33C);
+    background: linear-gradient(45deg, #119DA4, #04B46D ,  #FBF33C);
     height: 300px;
     text-align: center;
+}
+.secondary-banner h2 {
+    line-height: 50px;
+    padding-top: 50px;
+}
+
+.secondary-banner p {
+    padding: 50px;
 }
