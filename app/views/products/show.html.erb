@@ -26,25 +26,25 @@
     <div class="info-container">
       <h2><%= @product.name %></h2>
       <h6>(Reviews stars field)</h6>
-      <h5><%= @product.description %></h5>
-      <h5><strong>Price-</strong><%= @product.unit_price %>/unit</h5>
+      <h6><%= @product.description %></h6>
+      <h6><strong>Price-</strong><%= @product.unit_price %>/unit</h6>
 
-      <div class="quantity-container d-flex">
-        <h5><strong>Qty</strong></h5>
+      <div class="quantity-container">
+        <h6><strong>Qty</strong></h6>
         <%= simple_form_for @order_item do |f| %>
           <div class="def-number-input number-input">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
             <%= f.input :quantity, label: false %>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();  return false;" class="plus"></button>
           </div>
-          <%= f.button :submit, class:"btn btn-primary", to_label: "Add to cart"%>
+          <%= f.button :submit, class:"add-to-cart", to_label: "Add to cart"%>
         <% end %>
       </div>
     </div>
 
   </div>
 
-  <div class="producer-review-container text-center">
+  <div class="producer-review-container justify-content-center">
 
     <ul class="list-inline tabs-underlined">
       <li>
