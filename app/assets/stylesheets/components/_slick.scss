@@ -1,11 +1,31 @@
-.category-slick {
-}
-
-.slick-prev, .slick-next  {
-    color: black;
-}
-
-
 .slick-container {
     height: 300px;
+    padding-top: 50px;
+}
+
+.slick-container > p {
+    color: $red;
+    margin-left: 110px;
+    font-weight: bold;
+}
+.slick-container p {
+    color: $red;
+}
+
+.slick-prev:before {
+    content: "<";
+    color: rgb(0, 0, 0) !important;
+    font-size: 30px;
+    opacity: 1 !important;
+}
+
+.slick-next:before {
+    content: ">";
+    color: rgb(0, 0, 0) !important;
+    font-size: 30px;
+    opacity: 1 !important;
+}
+
+.category-card {
+    margin: 0 auto;
 }

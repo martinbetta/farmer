@@ -2,39 +2,89 @@
 
 .banner {
     background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%), url(bg4.jpg);
-    height: 88vh;
+    height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom right;
 }
+
 .banner-text {
     padding: 190px 0px;
 }
+
 .banner-text h1, 
 .banner-text p {
     font-weight: bold;
     color: $light-gray;
 }
+.banner-text h1 {
+    font-size: 3vw;
+}
+.banner-text p {
+    font-size: 1.4vw;
+}
+
 .banner-text p:nth-child(3) {
     margin-top: 50px;
 }
 
-
-
 /*  Second banner*/
 
 .secondary-banner {
-    background: #FBF33C;
-    background: -webkit-linear-gradient(45deg, #119DA4, #04B46D ,  #FBF33C);
-    background: linear-gradient(45deg, #119DA4, #04B46D ,  #FBF33C);
-    height: 300px;
+    background: #2B580C;
+    height: 50vh;
     text-align: center;
+    color:#F09819;
 }
+
 .secondary-banner h2 {
     line-height: 50px;
-    padding-top: 50px;
+    padding-top: 40px;
+    font-size: 2vw;
 }
 
 .secondary-banner p {
-    padding: 50px;
+    padding: 30px;
+    font-size: 1.3vw;
+}
+
+/* Banner label */
+
+.cont-label {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+}
+
+.label {
+    height: 70px;
+    width: 70px;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 50%;
+    text-align: center;
+    margin: 30px auto;
+
+}
+
+.label .fas {
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+    opacity: 0.5;
+}
+
+.card-label p {
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    opacity: 0.7;
+    font-size: 1.2vw;
+}
+
+.card-label h2 {
+    font-size: 1.4vw;
+    font-weight: bold;
+    opacity: 0.8;
 }
