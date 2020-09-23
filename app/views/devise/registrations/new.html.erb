@@ -1,6 +1,10 @@
 <div class="container">
 
   <h2>Sign up</h2>
+   <% if params[:role] == "vendor" %>
+    <% vendor_info = VendorInfo.new %>
+    <% resource.vendor_info = vendor_info %>
+  <% end %>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -33,7 +37,19 @@
         <%= f.input :role,
                     as: :hidden,
                     required: true,
-                    input_html: { autocomplete: "role", value: 1 } %>
+                    input_html: { autocomplete: "role", value: :vendor } %>
+
+
+        <%= f.simple_fields_for :vendor_info do |a| %>
+           <%= a.input :description,
+                  input_html: { autocomplete: "description" } %>
+
+          <%= a.input :company_name%>
+
+        <% end %>
+
+
+
       <% else %>
         <%= f.input :role,
                     required: true,
