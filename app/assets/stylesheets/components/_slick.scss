@@ -1,11 +1,45 @@
-.category-slick {
-}
-
-.slick-prev, .slick-next  {
-    color: black;
-}
-
-
 .slick-container {
     height: 300px;
+    padding-top: 50px;
+}
+
+.slick-container p {
+    color: $red;
+}
+
+.category {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
+}
+
+.slick-prev:before {
+    content: "<";
+    color: rgb(0, 0, 0) !important;
+    font-size: 30px;
+    opacity: 1 !important;
+}
+
+.slick-next:before {
+    content: ">";
+    color: rgb(0, 0, 0) !important;
+    font-size: 30px;
+    opacity: 1 !important;
+
+}
+.icon {
+    width: 90px;
+}
+
+.wrapper  {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin:0 auto;
+    
+}
+.wrapper small {
+    margin: 0 auto;
 }
