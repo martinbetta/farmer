@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  enum status: [ :user, :producer ]
+  # enum status: [ :user, :producer ]
+
 
   has_many :orders
   has_many :products
@@ -13,4 +14,7 @@ class User < ApplicationRecord
 
   #delegate :company_name, to: :vendor_info
   enum role: [ :buyer, :vendor ]
+
+  accepts_nested_attributes_for :vendor_info
+
 end
