@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="product-container">
+
+    <div class="img-container">
+      <div id="carouselExampleInterval" class="carousel slide"  data-interval="false" data-ride="carousel" style=" width:550px; height: 450px !important;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1593759608329-a8247d4f5e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <h2><%= @product.name %></h2>
+      <h6>(Reviews stars field)</h6>
+      <h6><%= @product.description %></h6>
+      <h6><strong>Price-</strong><%= @product.unit_price %>/unit</h6>
+
+      <div class="quantity-container">
+        <h6><strong>Qty</strong></h6>
+        <%= simple_form_for @order_item do |f| %>
+          <div class="def-number-input number-input">
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
+            <%= f.input :quantity, label: false %>
+            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();  return false;" class="plus"></button>
+          </div>
+          <%= f.button :submit, class:"add-to-cart", to_label: "Add to cart"%>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="producer-review-container justify-content-center">
+
+    <ul class="list-inline tabs-underlined">
+      <li>
+        <a href="#" class="tab-underlined active">Producer</a>
+      </li>
+      <li>
+        <a href="#" class="tab-underlined">Reviews</a>
+      </li>
+    </ul>
+
+  </div>
+</div>

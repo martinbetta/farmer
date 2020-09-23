@@ -17,3 +17,82 @@
   opacity: 1;
   border-bottom: 3px solid #555555;
 }
+
+.product-container {
+  display: flex;
+  padding-top: 25px
+}
+
+.info-container {
+  margin-left: 40px
+}
+
+.carousel-item img {
+  border-radius: 10px;
+}
+
+
+//-----------------------------------------------------
+.add-to-cart{
+  position:absolute;
+  width: 500px;
+  height: 200px;
+}
+.def-number-input{
+  display: flex;
+  position: absolute;
+  left: 50px;
+  top: -7px;
+}
+.quantity-container h6{
+  margin-top: 20px;
+}
+
+.quantity-container{
+  position: relative;
+}
+
+.number-input input[type=number]::-webkit-inner-spin-button,
+.number-input input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+}
+
+.number-input button:before,
+.number-input button:after {
+display: inline-block;
+position: absolute;
+content: '';
+height: 1px;
+transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input.number-input {
+width: 10rem;
+border-radius: .25rem;
+}
+
+.number-input.number-input button {
+width: 40px;
+height: 40px;
+border-style: none;
+border-radius: 3px;
+}
+
+.number-input.number-input button:before,
+.number-input.number-input button:after {
+width: 2rem;
+background-color: #495057;
+}
+
+.number-input.number-input input[type=number] {
+max-width: 45px;
+padding: 1rem;
+font-size: 1rem;
+height: 40px;
+color: #495057;
+border-radius:3px
+}
