@@ -17,6 +17,12 @@
     font-weight: bold;
     color: $light-gray;
 }
+.banner-text h1 {
+    font-size: 3vw;
+}
+.banner-text p {
+    font-size: 1.4vw;
+}
 
 .banner-text p:nth-child(3) {
     margin-top: 50px;
@@ -39,6 +45,7 @@
 
 .secondary-banner p {
     padding: 30px;
+    font-size: 1.3vw;
 }
 
 /* Banner label */
