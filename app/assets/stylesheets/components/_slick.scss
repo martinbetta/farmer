@@ -7,10 +7,13 @@
     color: $red;
 }
 
-.category div {
-    background-color: blue;
-    width: 70px;
-    height: 70px;
+.category {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    img {
+        margin: 0 auto;
+    }
 }
 
 .slick-prev:before {
@@ -27,10 +30,16 @@
     opacity: 1 !important;
 
 }
-
-.items {
-    margin: 50px;
+.icon {
+    width: 90px;
 }
-.category small {
-    padding: 5px;
+
+.wrapper  {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin:0 auto;
+    
+}
+.wrapper small {
+    margin: 0 auto;
 }
