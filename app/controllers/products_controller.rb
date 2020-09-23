@@ -2,10 +2,14 @@ class ProductsController < ApplicationController
 
 
   def index
+    @products = Product.all
+
     if params[:query].present?
-      @products = Product.where(category: params[:query])
-    else
-      @products = Product.all
+      @products = @products.where(category: params[:query])
+    end
+
+    if params[:search].present?
+      @products = @products.where('name ILIKE ?', "%#{params[:search]}%")
     end
   end
 
