@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @order_item = OrderItem.new
+    @vendor = @product.user.vendor_info
   end
 
 

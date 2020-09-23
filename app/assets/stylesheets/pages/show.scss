@@ -1,23 +1,27 @@
-.tabs-underlined {
-  display: flex;
-  align-items: center;
+
+.more-products {
+  margin: 50px
 }
-  
-.tabs-underlined .tab-underlined {
-  color: black;
-  padding: 8px;
-  margin: 8px 16px;
-  opacity: .4;
-  cursor: pointer;
-  text-decoration: none;
-  border-bottom: 4px solid transparent;
-}
-  
-.tabs-underlined .tab-underlined.active {
-  opacity: 1;
-  border-bottom: 3px solid #555555;
+//------------------------------------------------------
+.nav-tabs .nav-link.active {
+  color: #fd5e53;
+  border-top-color: #fd5e53;
+  border-left-color: #fd5e53;
+  border-right-color: #fd5e53;
+  font-weight: bold;
 }
 
+.nav-tabs {
+  border-color: #fd5e53;
+}
+
+.nav-tabs .nav-link {
+  color: lightgray;
+  font-weight: bold;
+}
+
+
+//---------------------------------------------------
 .product-container {
   display: flex;
   padding-top: 25px
@@ -31,12 +35,29 @@
   border-radius: 10px;
 }
 
+.producer-img-container img {
+  border-radius: 10px
+}
+
+.info-container p{
+  margin-top: 20px
+}
+
+.info-container h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.info-container h2 {
+  margin-top: 0px;
+  margin-bottom: 0px
+}
 
 //-----------------------------------------------------
 .add-to-cart{
   position:absolute;
-  width: 500px;
-  height: 200px;
+  left: 0px;
+  top: 50px;
 }
 .def-number-input{
   display: flex;
@@ -96,3 +117,7 @@ height: 40px;
 color: #495057;
 border-radius:3px
 }
+
+
+//----------------------------------------------
+
