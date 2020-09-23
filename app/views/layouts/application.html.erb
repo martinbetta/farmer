@@ -31,13 +31,18 @@
             </symbol>
           </svg>
         <div class="btn-container">
-          <% if current_user %>
-              <p class='nav-btn'><%= link_to "Account", root_path %></p>
+
+          <% if current_user %> 
+              <p class="dashboard"><%= link_to "Dashboard", root_path %></p>
               <p class="sign-out-btn"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
           <% else %>
               <p class="sign-in-btn"><%= link_to "Sign In", new_user_session_path %></p>
               <p class="sign-up-btn"><%= link_to  "Sign Up", new_user_registration_path %></p>
           <% end %>
+
+          <%= link_to new_user_registration_path do %>
+              <i class="fas fa-shopping-cart"></i> 
+           <% end %>
         </div>
 
       </div>
