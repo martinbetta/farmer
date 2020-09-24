@@ -6,10 +6,13 @@
     margin-right: 10px;
   }
 }
+
 .filter-badge{
   background-color: $red;
   color:white;
 }
+
+
 .bold-title {
   color: black;
   font-weight: bold;
@@ -36,6 +39,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+.grid-cat a {
+  text-decoration: none;
+}
 
 
 .category-card-sidebar {
@@ -44,8 +50,8 @@
   background-size: cover;
   background-position: center;
   border:  solid #f2f2f2;
-  //  border-collapse: separate;
-  // border-spacing: 15px 50px;
+  margin: 0 auto;
+  transition-duration: 500ms;
     &:hover {
       box-shadow: 0px 1px 30px rgba(0,0,0,0.1);
     }
@@ -68,28 +74,32 @@
 }
 
 
-.button-all-products {
-    background-color: $red;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-weight: normal;
-    width:100%;
-}
 .text-butt-allcatego{
     text-decoration: none;
     color: white;
 }
 .index_producer{
-margin-top: 15px;
+margin-top: 50px;
 
 }
 
-.vendor_name-index{
-  background-color: #FB7813;
+.vendor-name-index p{
   text-decoration: none;
   color:black;
+  border-bottom: 1px solid rgb(138, 138, 138);
+  padding: 5px 0px;
+  opacity:0.5 ;
+  transition-duration: 500ms;
+}
 
+.vendor-name-index:hover {
+  text-decoration: none;
+  color: black;  
+}
 
+.vendor-name-index p:hover {
+  opacity: 1;
+  color: black;
 }
 .price-product-index{
   font-size: 14px;

@@ -14,7 +14,7 @@
     <div class="items">
         <% Product::CATEGORIES.each do |category|  %>
           <a class='icon' href='/products?search=<%= category %>'>
-          <div class="category-card" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)"></div>
+          <div class="category-card-sidebar" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)"></div>
           <p class="category-name"> <%= category %> </p>
           </a>
         <% end %>
