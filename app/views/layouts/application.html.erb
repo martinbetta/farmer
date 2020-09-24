@@ -50,8 +50,17 @@
 		<label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
 		<nav class="sidebar"> 
 			<ul>
-				<li><a href="#"> content </a></li>
-				<li><a href="#"> content </a></li>
+				<li> <% i = 0 %>
+             <% Order.find_by(user: current_user, status: "new").order_items.uniq.each do |item| %>
+              <% i += 1 %>
+              <% if item == item  %>
+                <%= i  %>   <%= item.product.name %> <%= item.quantity %>  <%= item.price + item.price %>  </br>
+              <% else %>
+                <%= i  %>  <%= item.product.name %> <%= item.quantity %> <%= item.price %> </br>
+              <% end %>
+            <% end %>
+        </li>
+				<li></li>
 			</ul>
 		</nav>
 	</div>
