@@ -1,0 +1,32 @@
+.user-sign-in-up-button input {
+  background-color: #da4302;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.sign-in-up-box{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.wrapper-1-sign-in-up {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.wrapper-2-sign-in-up {
+  background-image: url("https://images.unsplash.com/photo-1423483641154-5411ec9c0ddf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+
+#vendor-registration{
+  color: #da4302;
+}
