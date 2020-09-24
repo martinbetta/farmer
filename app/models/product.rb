@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
 
   include PgSearch::Model
-  CATEGORIES = ['Fruits', 'Vegetables','Breads', 'Milk and Eggs', 'Juices', 'Wines', 'Boxes & Packs', 'Other'].freeze
+  CATEGORIES = ['Fruits', 'Vegetables','Bread', 'Milk', 'Eggs', 'Juices', 'Wines', 'Boxes & Packs', 'Other'].freeze
   belongs_to :user
 
   pg_search_scope :search_by_category_and_name,
@@ -9,5 +9,4 @@ class Product < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-
 end

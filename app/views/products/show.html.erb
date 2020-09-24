@@ -1,17 +1,17 @@
 <div class="container">
-  <div class="product-container">
 
+  <div class="product-container">
     <div class="img-container">
-      <div id="carouselExampleInterval" class="carousel slide"  data-interval="false" data-ride="carousel" style=" width:550px; height: 450px !important;">
+      <div id="carouselExampleInterval" class="carousel slide"  data-interval="false" data-ride="carousel" style=" width:580px; height: 450px !important;">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+            <img src="https://images.unsplash.com/photo-1524593166156-312f362cada0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+            <img src="https://images.unsplash.com/photo-1471194402529-8e0f5a675de6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1593759608329-a8247d4f5e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="...">
+            <img src="https://images.unsplash.com/photo-1593759608329-a8247d4f5e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="d-block w-100">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
@@ -24,10 +24,20 @@
     </div>
 
     <div class="info-container">
-      <h2><%= @product.name %></h2>
-      <h6>(Reviews stars field)</h6>
-      <h6><%= @product.description %></h6>
-      <h6><strong>Price-</strong><%= @product.unit_price %>/unit</h6>
+      <h2 class="product-header"><%= @product.name %></h2>
+
+      <div class="address-review-container">
+        <h6><%= @product.user.address %></h6>
+        <h6>(Reviews stars field)</h6>
+      </div>
+
+      <div class="description-container">
+        <p><%= @product.description %></p>
+      </div>
+
+      <div class="price-container">
+        <h6 class="price-container"><strong>Price &emsp;&emsp;</strong><%= @product.unit_price %>/ unit</h6>
+      </div>
 
       <div class="quantity-container">
         <h6><strong>Qty</strong></h6>
@@ -37,23 +47,62 @@
             <%= f.input :quantity, label: false %>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();  return false;" class="plus"></button>
           </div>
-          <%= f.button :submit, class:"add-to-cart", to_label: "Add to cart"%>
+          <%= f.button :submit, 'Add to cart', class:"add-to-cart"%>
         <% end %>
       </div>
+
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Producer</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Review</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" style="margin-top: 20px" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+      <div class="producer-container d-flex">
+        <div class="producer-img-container" style=" width:420px; height: 380px">
+          <img src="https://images.unsplash.com/photo-1537721664796-76f77222a5d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="d-block w-100" alt="...">
+        </div>
+
+        <div class="vendor-info" style="margin-left: 40px">
+          <h2><%= @vendor.company_name %></h2>
+          <h6>(Reviews stars field)</h6>
+          <h6><%= @vendor.description %></h6>
+        </div>
+      </div>
+
+      <div class="more-products text-center">
+        <h1>More from <strong class="color-vendor"><%= @vendor.company_name %></strong></h1>
+      </div>
+
+      <div class="col-12 p-0">
+        <div class="grid-show">
+          <% @vendor.user.products.each do |product| %>
+            <%= link_to product_path(product) do %>
+              <div class="product-card">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1506807803488-8eafc15316c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')">
+                </div>
+                <div class="product-info">
+                  <h4 class="bold-title"> <%= product.name %> </h4>
+                  <p class="category-name-small"><%= product.category %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
     </div>
 
   </div>
 
-  <div class="producer-review-container justify-content-center">
 
-    <ul class="list-inline tabs-underlined">
-      <li>
-        <a href="#" class="tab-underlined active">Producer</a>
-      </li>
-      <li>
-        <a href="#" class="tab-underlined">Reviews</a>
-      </li>
-    </ul>
-
-  </div>
 </div>

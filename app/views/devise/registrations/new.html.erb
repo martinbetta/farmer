@@ -39,8 +39,6 @@
                       as: :hidden,
                       required: true,
                       input_html: { autocomplete: "role", value: :vendor } %>
-
-
           <%= f.simple_fields_for :vendor_info do |a| %>
              <%= a.input :description,
                     input_html: { autocomplete: "description" } %>

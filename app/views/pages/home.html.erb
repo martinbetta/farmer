@@ -3,51 +3,22 @@
         <div class="banner-text">
             <h1>Eat fresh, local, and responsible.</h1>
             <p>Join us in making cities more sustainable.</p>
-            <p class='see-all-products'><%= link_to "See all products", root_path %></p>
+            <p class='see-all-products'><%= link_to "See all products", products_path %></p>
         </div>
     </div>
 </div>
 
 
 <div class="container slick-container">
-    <p>Category</p>
+    <p>Category:</p>
     <div class="items">
-        <div class='category'>
-            <img src='assets/fruits.png' class="icon">
-            <small>Fruits</small>
-        </div>
-        <div class='category'>
-            <img src='assets/vegetable.png' class="icon">
-            <small>Vegetables</small>
-        </div>
-        <div class='category'>
-            <img src='assets/bread.png' class="icon">
-            <small>Breads</small>
-        </div>
-        <div class='category'>
-            <img src='assets/milk.png' class="icon">
-            <small>Milk</small>
-        </div>
-        <div class='category'>
-            <img src='assets/eggs.png' class="icon">
-            <small>Eggs</small>
-        </div>
-        <div class='category'>
-            <img src='assets/juice.png' class="icon">
-            <small>Juices</small>
-        </div>
-        <div class='category'>
-            <img src='assets/wine.png' class="icon">
-            <small>Wines</small>
-        </div>
-        <div class='category'>
-            <img src='assets/vegetables.png' class="icon">
-            <small>Boxes & Packs</small>
-        </div>
-        <div class='category'>
-            <img src='assets/file.png' class="icon">
-            <small>Other</small>
-        </div>
+        <% Product::CATEGORIES.each do |category|  %>
+          <a class='icon' href='/products?search=<%= category %>'>
+          <div class="category-card" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)">
+          </div>
+          <p class="category-name"> <%= category %> </p>
+          </a>
+        <% end %>
     </div>
 </div>
 
@@ -57,8 +28,7 @@
         <p>Conscious of environmental issues and the concerns of our customers, 
         we are constantly developing our range of fruits and vegetables, 
         notably by offering an extensive range of locally sourced produce.
-        As a member of Kenya Organic Agriculture Network (KOAN) 
-        we support organic certified small holder farmers by providing a market 
+        We support organic certified small holder farmers by providing a market 
         for their produce giving them fair pricing to encourage produce sustainability.</p>
     </div>
 </div>

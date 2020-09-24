@@ -1,7 +1,6 @@
 <div class="container sign-in-up-box">
   <div class="wrapper-1-sign-in-up">
     <h2 id="header-sign-in">Log in</h2>
-
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
         <%= f.input :email,
@@ -23,4 +22,5 @@
   </div>
   <div class="wrapper-2-sign-in-up">
   </div>
+
 </div>
