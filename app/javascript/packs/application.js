@@ -46,8 +46,6 @@ $('.items').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
   arrows: true,
-  prevArrow:"<button type='button' class='slick-prev pull-left'> aaaaaa </button>",
-  nextArrow:"<button type='button' class='slick-next pull-right'> aaaaa </button>",
   responsive: [
     {
       breakpoint: 1024,
