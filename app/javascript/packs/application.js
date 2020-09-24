@@ -38,7 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   slide
 });
 
-const slide = 
+const slide =
 $('.items').slick({
   dots: true,
   infinite: false,
