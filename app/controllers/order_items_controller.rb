@@ -16,10 +16,10 @@ class OrderItemsController < ApplicationController
       @order.status = "new"
       @order.save
     end
+
     @order_item.order = @order
-
     @order_item.save
-
+    
     redirect_to product_path(params[:product_id])
   end
 
