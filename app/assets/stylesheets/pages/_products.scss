@@ -1,3 +1,14 @@
+.filters-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  a{
+    margin-right: 10px;
+  }
+}
+// .filter-badge{
+//   background-color: #FB7813;
+// }
 .bold-title {
   color: black;
   font-weight: bold;
@@ -30,6 +41,12 @@
   height: 50px;
   background-size: cover;
   background-position: center;
+  border:  solid #f2f2f2;
+  //  border-collapse: separate;
+  // border-spacing: 15px 50px;
+    &:hover {
+      box-shadow: 0px 1px 30px rgba(0,0,0,0.1);
+    }
 }
 
 .category-name {
@@ -44,7 +61,7 @@
 }
 
 .numeration-index{
-  margin-top: 30px;
+  margin-top: 10px;
     font-size: 13px;
 }
 
@@ -52,15 +69,29 @@
 .button-all-products {
     background-color: $red;
     border-radius: 5px;
-    margin-top: 30px;
+    margin-top: 10px;
     font-weight: normal;
     width: 200px;
-
 }
 .text-butt-allcatego{
     text-decoration: none;
-     color: white;
-     text-align: 0 auto;
+    color: white;
+}
+.index_producer{
+margin-top: 15px;
+
 }
 
+.vendor_name-index{
+  background-color: #FB7813;
+  text-decoration: none;
+  color:black;
+}
+.price-product-index{
+  font-size: 14px;
+   text-decoration: none;
+   color:black;
+   font-style: bold;
+
+}
 

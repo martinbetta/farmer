@@ -1,5 +1,18 @@
 <div class="container">
+  <div class="filters-container">
+    <% if params[:search] %>
+      <a href="/products?<%= 'vendor=' + params[:vendor] if params[:vendor].present? %>">
+        <span class="badge filter-badge"><%= params[:search]  %> <i class="fas fa-times"></i></span>
+      </a>
+    <% end %>
 
+    <% if params[:vendor] %>
+    <a href="/products?<%= 'search=' + params[:search] if params[:search].present? %>">
+      <span class="badge filter-badge"><%= params[:vendor]  %> <i class="fas fa-times"></i></span>
+    </a>
+    <% end %>
+
+  </div>
   <p class="numeration-index"> Showing <%= @products.count%> out of <%= @products.all.count%> results </p>
   <div class="row">
 
@@ -12,7 +25,9 @@
               </div>
               <div class="product-info">
                 <h4 class="bold-title"> <%= product.name %> </h4>
+                <h4 class="price-product-index"> <i class="fas fa-euro-sign"></i> <%= product.unit_price %> / <%= product.unit %> </h4>
                 <p class="category-name-small"><%= product.category %></p>
+
               </div>
             </div>
           <% end %>
@@ -23,20 +38,26 @@
     <div class="col-3">
       <div class="grid-cat">
         <% Product::CATEGORIES.each do |category|  %>
-          <a href='/products?search=<%= category %>'>
+          <a href="/products?search=<%= category %><%= '&vendor=' + params[:vendor] if params[:vendor].present? %>">
           <div class="category-card" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)">
           </div>
-
+         <p class='category-name'> <%=category%></p>
           </a>
         <% end %>
       </div> <!---- closing the grid-cat div ---->
 
-      <a href='/products?search=' class= 'btn button-all-products'>
-      <div class="text-butt-allcatego">
-         <p>See all products</p>
-      </div>
-    </a>
+      <a href='/products' class= 'btn button-all-products text-white'>
 
+         See all products
+      </a>
+      <div class= "index_producer">
+      <h4>Our list of producers:</h4>
+        <% @producers.each do |producer| %>
+        <a class= 'vendor_name-index' href="/products?vendor=<%= producer.vendor_info.company_name %><%= '&search=' + params[:search] if params[:search].present? %>">
+          <p> <%= producer.vendor_info.company_name %></p>
+        </a>
+        <% end %>
+      </div>
 
     </div> <!---- closing the col-3 ---->
   </div> <!---- closing the row div ---->
