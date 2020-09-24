@@ -88,4 +88,3 @@ const toggleSidebar = () => {
 $("#slide").on("click tap", function() {
   toggleSidebar();
 });
-

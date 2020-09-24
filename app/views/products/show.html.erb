@@ -25,7 +25,7 @@
 
     <div class="info-container">
       <h2 class="product-header"><%= @product.name %></h2>
-
+      
       <div class="address-review-container">
         <h6><%= @product.user.address %></h6>
         <h6>(Reviews stars field)</h6>
@@ -50,7 +50,6 @@
           <%= f.button :submit, 'Add to cart', class:"add-to-cart"%>
         <% end %>
       </div>
-
     </div>
   </div>
 
@@ -62,14 +61,13 @@
       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Review</a>
     </li>
   </ul>
+
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" style="margin-top: 20px" id="home" role="tabpanel" aria-labelledby="home-tab">
-
       <div class="producer-container d-flex">
         <div class="producer-img-container" style=" width:420px; height: 380px">
           <img src="https://images.unsplash.com/photo-1537721664796-76f77222a5d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="d-block w-100" alt="...">
         </div>
-
         <div class="vendor-info" style="margin-left: 40px">
           <h2><%= @vendor.company_name %></h2>
           <h6>(Reviews stars field)</h6>
