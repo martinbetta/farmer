@@ -6,9 +6,10 @@
     margin-right: 10px;
   }
 }
-// .filter-badge{
-//   background-color: #FB7813;
-// }
+.filter-badge{
+  background-color: $red;
+  color:white;
+}
 .bold-title {
   color: black;
   font-weight: bold;
@@ -36,7 +37,8 @@
   grid-gap: 16px;
 }
 
-.category-card {
+
+.category-card-sidebar {
   width: 50px;
   height: 50px;
   background-size: cover;
@@ -86,12 +88,13 @@ margin-top: 15px;
   background-color: #FB7813;
   text-decoration: none;
   color:black;
+
+
 }
 .price-product-index{
   font-size: 14px;
    text-decoration: none;
    color:black;
    font-style: bold;
-
 }
 
