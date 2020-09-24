@@ -25,7 +25,7 @@
 
     <div class="info-container">
       <h2 class="product-header"><%= @product.name %></h2>
-      
+
       <div class="address-review-container">
         <h6><%= @product.user.address %></h6>
         <h6>(Reviews stars field)</h6>
@@ -41,7 +41,7 @@
 
       <div class="quantity-container">
         <h6><strong>Qty</strong></h6>
-        <%= simple_form_for @order_item do |f| %>
+        <%= simple_form_for [@product, @order_item], remote: true do |f| %>
           <div class="def-number-input number-input">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
             <%= f.input :quantity, label: false %>

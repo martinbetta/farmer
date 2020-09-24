@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <nav>
+    <div class="nav">
       <div class="container">
         <p class='logo'><%= link_to "Local", root_path %></p>
           <form action="/products">
@@ -41,14 +41,31 @@
               <p class="sign-up-btn"><%= link_to  "Sign Up", new_user_registration_path %></p>
           <% end %>
 
-          <%= link_to new_user_registration_path do %>
-              <i class="fas fa-shopping-cart"></i>
-           <% end %>
-        </div>
 
+        </div>
       </div>
 
-    </nav>
+  <input type="checkbox" id="slide" name="" value="" />
+	<div class="container">
+		<label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
+		<nav class="sidebar"> 
+			<ul>
+				<li> <% i = 0 %>
+             <% Order.find_by(user: current_user, status: "new").order_items.uniq.each do |item| %>
+              <% i += 1 %>
+              <% if item == item  %>
+                <%= i  %>   <%= item.product.name %> <%= item.quantity %>  <%= item.price + item.price %>  </br>
+              <% else %>
+                <%= i  %>  <%= item.product.name %> <%= item.quantity %> <%= item.price %> </br>
+              <% end %>
+            <% end %>
+        </li>
+				<li></li>
+			</ul>
+		</nav>
+	</div>
+
+    </div>
     <%= yield %>
   </body>
 </html>

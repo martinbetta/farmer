@@ -27,6 +27,7 @@ User.destroy_all
   vendor = VendorInfo.create(
     description: Faker::Company.industry,
     company_name: Faker::Company.name,
+    image_url: "https://source.unsplash.com/random",
     user: user
   )
   5.times do
@@ -70,3 +71,4 @@ end
     end
   end
 end
+
