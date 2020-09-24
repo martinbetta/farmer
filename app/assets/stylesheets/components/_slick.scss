@@ -5,7 +5,7 @@
 
 .slick-container > p {
     color: $red;
-    margin-left: 110px;
+    margin-left: 70px;
     font-weight: bold;
 }
 .slick-container p {
@@ -28,4 +28,6 @@
 
 .category-card {
     margin: 0 auto;
+    height: 70px !important;
+    width: 70px !important;
 }
