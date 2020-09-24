@@ -24,7 +24,7 @@
     transition: all 0.15s ease-out 0;
     width: 500px;
     padding: 1.5em;
-    background: $green;
+    background: rgb(159, 158, 158);
     z-index: 1;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .sidebar li a {
-    color: #fff;
+    color: rgb(28, 27, 27);
     font-family: 'Poiret One', cursive;
     font-size: 1.2em;
     margin: 0;
@@ -58,7 +58,14 @@
     position: fixed;
 }
 
-
 #slide {
     display: none; 
+}
+
+.fa-times {
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    top: 26px;
+    right: 1px;
 }
