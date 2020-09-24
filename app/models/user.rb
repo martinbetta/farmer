@@ -15,6 +15,7 @@ class User < ApplicationRecord
   #delegate :company_name, to: :vendor_info
   enum role: [ :buyer, :vendor ]
 
-  accepts_nested_attributes_for :vendor_info
+  # accepts_nested_attributes_for :vendor_info
 
+  # delegate :company_name, to: :vendor_info
 end

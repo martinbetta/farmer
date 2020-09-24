@@ -9,6 +9,12 @@ class ProductsController < ApplicationController
       @products = Product.all
     end
 
+
+    if params[:vendor].present?
+      @products = @products.joins(user: :vendor_info).where('company_name = ?', params[:vendor])
+    end
+
+    @producers = User.where(role: :vendor)
   end
 
   def show
@@ -16,6 +22,5 @@ class ProductsController < ApplicationController
     @order_item = OrderItem.new
     @vendor = @product.user.vendor_info
   end
-
 
 end
