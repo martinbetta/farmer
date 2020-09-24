@@ -39,7 +39,7 @@ document.addEventListener('turbolinks:load', () => {
   cartSlider()
 });
 
-const slide = 
+const slide =
 $('.items').slick({
   dots: true,
   infinite: false,

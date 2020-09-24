@@ -40,14 +40,19 @@
                       required: true,
                       input_html: { autocomplete: "role", value: :vendor } %>
           <%= f.simple_fields_for :vendor_info do |a| %>
-             <%= a.input :description,
+            <%= a.input :description,
+                    placeholder: "Showcase your company and share details about your business here",
                     input_html: { autocomplete: "description" } %>
 
             <%= a.input :company_name%>
 
+            <%= a.input :image_url,
+                    required: true,
+                    label: "Image URL",
+                    placeholder: "e.g.: https://www.mybusiness.com/profile-pic",
+                    input_html: { autocomplete: "image_url" } %>
+
           <% end %>
-
-
 
         <% else %>
           <%= f.input :role,
