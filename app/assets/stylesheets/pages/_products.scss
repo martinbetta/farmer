@@ -67,10 +67,20 @@
     text-decoration: none;
   }
 }
+.top-title-categories{
+  display: flex;
+  position: relative;
 
+}
 .numeration-index{
   margin-top: 10px;
-    font-size: 13px;
+  font-size: 13px;
+
+}
+.title-index-category{
+  text-align: right;
+   position: absolute;
+  margin-left: 725px;
 }
 
 
@@ -94,7 +104,7 @@ margin-top: 50px;
 
 .vendor-name-index:hover {
   text-decoration: none;
-  color: black;  
+  color: black;
 }
 
 .vendor-name-index p:hover {
