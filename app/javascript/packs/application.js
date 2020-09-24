@@ -35,7 +35,8 @@ import slick from "slick-carousel";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  slide
+  slide()
+  cartSlider()
 });
 
 const slide = 
@@ -72,3 +73,21 @@ $('.items').slick({
     }
   ]
 });
+
+
+
+ const cartSlider =   function toggleSidebar() {
+    $(".button").toggleClass("active");
+    $("main").toggleClass("move-to-left");
+    $(".sidebar-item").toggleClass("active");
+  }
+
+  $(".button").on("click tap", function() {
+    toggleSidebar();
+  });
+
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      toggleSidebar();
+    }
+  });

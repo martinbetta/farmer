@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0; }
+    
+    
+    .toggle {
+    text-decoration: none;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.61);
+    -webkit-transition: all 0.15s ease-out 0;
+    -moz-transition: all 0.15s ease-out 0;
+    transition: all 0.45s ease-out 0;
+    position: fixed;
+    top: 0px;
+    right: 100px;
+    z-index: 2;
+    cursor: pointer;
+    }
+    
+    .sidebar {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: -500px;
+    height: 700px;
+    -webkit-transition: all 0.15s ease-out 0;
+    -moz-transition: all 0.15s ease-out 0;
+    transition: all 0.15s ease-out 0;
+    width: 500px;
+    padding: 1.5em;
+    background: $green;
+    z-index: 1;
+    }
+    
+    .sidebar ul {
+    list-style: none;
+    margin: 50px 0 0 0;
+    padding: 0; 
+    }
+    
+    .sidebar li a {
+    color: #fff;
+    font-family: 'Poiret One', cursive;
+    font-size: 1.2em;
+    margin: 0;
+    margin-bottom: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 200%;
+    }
+    
+    .sidebar a:hover {
+      color: rgba(0, 0, 0, 0.61); 
+    }
+    
+    #slide:checked + .container .sidebar {
+    right: 0px;
+     }
+    
+    #slide:checked + .container .toggle {
+    right: 100px;
+     }
+    
+    
+    #slide {
+    display: none; 
+    }
+    
