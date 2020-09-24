@@ -72,8 +72,6 @@ document.addEventListener('turbolinks:load', () => {
   slide()
 });
 
-
-
 const toggleSidebar = () => {
   const checkbox = document.querySelector('#slide')
   const toggle = document.querySelector('#toggle')

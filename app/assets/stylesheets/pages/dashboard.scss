@@ -1,0 +1,14 @@
+.order-box {
+  padding: 10px
+}
+
+.order-items-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-price-status-box {
+  display:flex;
+  justify-content: space-between;
+  box-shadow: 0px 1px 30px rgba(0,0,0,0.1);
+}
