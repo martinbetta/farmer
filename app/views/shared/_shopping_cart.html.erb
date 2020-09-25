@@ -3,7 +3,7 @@
         <label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
         <nav class="sidebar">
           <ul>
-            <h3>Shopping cargggt:</h3>
+            <h3>Shopping cart:</h3>
             <% price_item = 0 %>
             <% if Order.find_by(user: current_user, status: "new") %>
               <% Order.find_by(user: current_user, status: "new").order_items.each do |item| %>
