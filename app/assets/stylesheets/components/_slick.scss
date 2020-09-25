@@ -1,16 +1,12 @@
 .slick-container {
     height: 300px;
-    padding-top: 50px;
 }
 
-.slick-container > p {
-    color: $red;
-    margin-left: 70px;
-    font-weight: bold;
-}
+
 .slick-container p {
     color: $red;
 }
+
 
 .slick-prev:before {
     content: "<";
@@ -38,4 +34,7 @@
 }
 .icon:hover {
     text-decoration: none;
+}
+.container-card {
+    margin: 100px 0px;
 }
