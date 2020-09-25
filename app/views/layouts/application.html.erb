@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <div class="nav">
+    <div class="nav1">
       <div class="container">
         <p class='logo'><%= link_to "Local", root_path %></p>
           <form action="/products">
@@ -34,18 +34,14 @@
         <div class="btn-container">
 
           <% if current_user %>
-              <div class="btn-container">
                 <p class="dashboard"><%= link_to "Dashboard", dashboard_path %></p>
-                <p class="sign-out-btn"><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %>
+                <p class="sign-out-btn"><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %> </p>
 
-              </div>
-              </p>
           <% else %>
+          
               <p class="sign-in-btn"><%= link_to "Sign In", new_user_session_path %></p>
-              <p class="sign-up-btn"><%= link_to  "Sign Up", new_user_registration_path %>
+              <p class="sign-up-btn"><%= link_to  "Sign Up", new_user_registration_path %></p>
               
-
-              </p>
           <% end %>
 
         </div>
@@ -61,7 +57,7 @@
             <% if Order.find_by(user: current_user, status: "new") %>
               <% Order.find_by(user: current_user, status: "new").order_items.each do |item| %>
                 <li class="list-item-cart">
-                  <span> <%= item.quantity %> X <%= item.product.name %></span>  <span> <%= item.price %> </span>
+                  <span> <%= item.quantity %> <%= item.product.unit %> <%= item.product.name %></span>  <span> <%= item.price %> </span>
                 </li>
                 <% price_item += item.price %>
               <% end %>
@@ -75,6 +71,7 @@
 
     </div>
     <%= yield %>
+
     <footer>
       <div class="padding-footer">
         <div class="footer-icons">
@@ -87,5 +84,6 @@
         <p>© 2020 OrganicGo Ltd, Barcelona, Spain, TQ14 0JU. +34 555 55344</p>
       </div>
     </footer>
+    
   </body>
 </html>

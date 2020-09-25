@@ -99,10 +99,11 @@ product = Product.new(
     category: "Fruits",
     unit_price: rand(1..5),
     unit: "kg",
-    image_url: "https://unsplash.com/photos/O3TlS547j7k",
+    image_url: "https://images.unsplash.com/photo-1532704868953-d85f24176d73?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
     user: user
     )
 
+product.save
 puts 'Creating single vendor 2'
 
 user = User.create(
