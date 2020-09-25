@@ -138,7 +138,7 @@ product = Product.new(
     category: "Vegetable",
     unit_price: rand(1..5),
     unit: "kg",
-    image_url: "https://images.unsplash.com/photo-1568647383371-b3df9ba396d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image_url: "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_-_1200x900%2Fpublic%2F1576796086%2FGettyImages-963036852.jpg%3Fitok%3DKbuIdzN_",
     user: user
     )
 product.save
@@ -176,7 +176,7 @@ user = User.create(
 vendor = VendorInfo.create(
   description: "At Cava Galore, we understand that the long production process of our cavas starts with the land and the vines. For this reason, our environmental awareness is understood as the result of the close ties between the process of making our products and our natural environment. The outcome of this effort is the fact that each day we are increasingly more respectful of the environment around us, thanks to our conviction and responsibility (this word is important; we believe we must take responsibility for our processes, as the environment belongs to us all, and it is the duty of each person to act in keeping with his/her possibilities). Proof of this responsibility resides in the fact that in 1999 we became the first cava company to earn the ISO14001 Certificate for Environmental Management. This environmental certificate was the result of many years of implementing improvements in each of the production processes, the underlying principle of which was prevention rather than treatment. Minimisation at the point of origin is key to all productive and environmental efficiency. It is a responsible stance towards our environment.",
   company_name: "Cava Galore",
-  image_url: "https://lh3.googleusercontent.com/proxy/0mESUH6LoBGn6r-zhGuifPnuEgXelkec4Xu3PKIZGfyXqo7h9F4miMd3hGFjDqPVDv_0zoEX4iCawrdq35BphfjezKde09qc4b7WfV3-z2IpLsps7J_0Kr95kEZAZw4RjHq6nZSsRC5W",
+  image_url: "https://i1.wp.com/www.winepleasures.com/wp-content/uploads/2018/12/Cava-tasting-1.jpg?ssl=1",
   user: user
   )
 product = Product.new(
@@ -301,7 +301,7 @@ product = Product.new(
     category: "Eggs",
     unit_price: rand(3..5),
     unit: "a dozen",
-    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTbMEYFzjGavmhciXrHtvl1o6gBhKUrnYScDg&usqp=CAU",
+    image_url: "https://www.carrfarm.org/wp-content/uploads/2018/01/20180126_193903.jpg",
     user: user
     )
 product.save
@@ -324,11 +324,11 @@ vendor = VendorInfo.create(
   )
 product = Product.new(
     name: "Apples Royal Gala",
-    description: "Royall Gala from the Barcelona region",
+    description: "Royal Gala from the Barcelona region",
     category: "Fruits",
     unit_price: rand(1..5),
     unit: "kg",
-    image_url: "https://images.unsplash.com/photo-1576673442511-7e39b6545c87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=708&q=80",
+    image_url: "https://www.dw.com/image/47425871_401.jpg",
     user: user
     )
 product.save
