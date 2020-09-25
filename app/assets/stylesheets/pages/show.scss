@@ -3,7 +3,7 @@
   margin-left: 40px
 }
 
-.more-products {
+.more-products h1 {
   margin: 50px
 }
 
@@ -11,6 +11,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-bottom: 70px;
 }
 
 //------------------------------------------------------
@@ -31,11 +32,6 @@
   font-weight: bold;
 }
 
-#myTab {
-  height: 41px;
-  margin-top: 40px
-}
-
 
 //---------------------------------------------------
 .color-vendor {
@@ -43,21 +39,22 @@
 }
 
 .producer-container {
-  height: 260px;
+  height: 400px;
 }
 .product-container {
   display: flex;
   padding-top: 25px
 }
 
-.carousel-item  img{
-  max-width: 580px;
-  max-height: 500px;
+.carousel-item img {
   border-radius: 10px;
+  height: 400px;
 }
 
 .producer-img-container img {
-  border-radius: 10px
+  border-radius: 10px;
+  
+  width: 500px;
 }
 
 .info-container p{
