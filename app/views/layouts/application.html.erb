@@ -41,14 +41,13 @@
               <p class="sign-up-btn"><%= link_to  "Sign Up", new_user_registration_path %></p>
           <% end %>
 
-
         </div>
       </div>
 
       <input type="checkbox" id="slide" name="" value="" />
       <div class="container">
         <label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
-        <nav class="sidebar"> 
+        <nav class="sidebar">
           <ul>
             <h3>Shopping cart:</h3>
             <% price_item = 0 %>
@@ -59,7 +58,8 @@
                 </li>
                 <% price_item += item.price %>
               <% end %>
-              <div class='total-price'> <span>Total price:</span><%= price_item %></div>
+            <div class='total-price'> <span>Total price:</span><%= price_item %></div>
+ 
             <% end %>
 
 
@@ -69,5 +69,17 @@
 
     </div>
     <%= yield %>
+    <footer>
+      <div class="padding-footer">
+        <div class="footer-icons">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+        <p>© 2020 OrganicGo Ltd, Barcelona, Spain, TQ14 0JU. +34 555 55344</p>
+      </div>
+    </footer>
   </body>
 </html>
