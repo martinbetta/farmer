@@ -1,5 +1,7 @@
 footer{
   background-color: Black;
+  position: absolute;
+  width: 100%;
   p{
     text-align: center;
     color:white;
@@ -29,5 +31,5 @@ margin-bottom: 20px
 }
 .padding-footer{
   padding: 30px;
-
+  position: relative
 }
