@@ -15,33 +15,252 @@ Product.destroy_all
 Order.destroy_all
 User.destroy_all
 
-5.times do |i|
-  user = User.create(
-    email: "vendor_#{i}@mail.com",
-    password: "password",
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    address: Faker::Address.street_address,
-    role: 1
+#vendors
+#vendors general
+# 5.times do |i|
+#   user = User.create(
+#     email: "vendor_#{i}@mail.com",
+#     password: "password",
+#     first_name: Faker::Name.first_name,
+#     last_name: Faker::Name.last_name,
+#     address: Faker::Address.street_address,
+#     role: 1
+#   )
+#   vendor = VendorInfo.create(
+#     description: Faker::Company.industry,
+#     company_name: Faker::Company.name,
+#     image_url: "https://source.unsplash.com/random",
+#     user: user
+#   )
+#   5.times do
+#     product = Product.new(
+#       name: Faker::Food.fruits,
+#       description: Faker::Food.description,
+#       category: CATEGORIES.sample,
+#       unit_price: rand(1..50),
+#       unit: Faker::Measurement.height(amount: "all"),
+#       user: user
+#     )
+#     product.save
+#   end
+# end
+
+#vendors single
+puts 'Creating single vendors...'
+puts 'Creating single vendor 1'
+
+user = User.create(
+  email: "farmer_peter@gmail.com",
+  password: "password",
+  first_name: "Peter",
+  last_name: "Johnson",
+  address: "Girona",
+  role: 1
   )
-  vendor = VendorInfo.create(
-    description: Faker::Company.industry,
-    company_name: Faker::Company.name,
-    image_url: "https://source.unsplash.com/random",
+vendor = VendorInfo.create(
+  description: "Peter's Organic Farm is located in the Province of Girona. Farmer Peter started the business here in 1987, and we’ve been growing organic fruits ever since. If you’re ever nearby, you’re more than welcome to come for a walk (the view, across fields and wood-shrouded hills, is a bit of a show-stopper). Or join us for a warm apple pie and a freshly squeezed juice at the Peter's Bistrot ;-)",
+  company_name: "Peter's Organic Farm",
+  image_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Ffarmer&psig=AOvVaw3BBIzEXKQrb_7HBAo00zqb&ust=1601116691053000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCz2M6OhOwCFQAAAAAdAAAAABAE",
+  user: user
+  )
+product = Product.new(
+    name: "Apples",
+    description: "Organically grown apples from the Girona region",
+    category: "Fruits",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://unsplash.com/photos/DapP9j2DJMQ",
     user: user
-  )
-  5.times do
-    product = Product.new(
-      name: Faker::Food.fruits,
-      description: Faker::Food.description,
-      category: CATEGORIES.sample,
-      unit_price: rand(1..50),
-      unit: Faker::Measurement.height(amount: "all"),
-      user: user
     )
-    product.save
-  end
-end
+product.save
+product = Product.new(
+    name: "Prunes",
+    description: "Organically grown prunes from the Girona region",
+    category: "Fruits",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1447175025301-707b39e9146f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Pears",
+    description: "Organically grown pears from the Girona region",
+    category: "Fruits",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1453487021979-5b739b2849f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Peaches",
+    description: "Organically grown peaches from the Girona region",
+    category: "Fruits",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://unsplash.com/photos/O3TlS547j7k",
+    user: user
+    )
+
+puts 'Creating single vendor 2'
+
+user = User.create(
+  email: "granja_de_lola@gmail.com",
+  password: "password",
+  first_name: "Dolores",
+  last_name: "Lopez-Lopez",
+  address: "Tarragona",
+  role: 1
+  )
+vendor = VendorInfo.create(
+  description: "Our purpose is to provide good nutrition, good health and happy times to you, our friends and customers, at our farm near Somerset West. Our farm is one of few in the country where you can buy and eat fresh organic produce that was harvested a few hours before. We believe that fresh organic fruits, vegetables and herbs provide many health and other benefits.
+  Firstly, we do not use any toxic agricultural chemicals, like pesticides, insecticides or herbicides on our farm and we do not use any artificial colours, flavours or preservatives in our kitchen; we therefore assure you that we will not add to the toxic contamination that many people suffer from the consumption of industrialized foods that contain many toxic substances.
+  Secondly, we enrich our soil with compost and other natural soil additives and we have developed a rich organic soil that contains billions of micro-organisms; this rich soil increases the quantity, the quality and the variety of nutrients in our produce and enables us to offer you food that is really nutritious.
+  Thirdly, our rich organic soil also enhances the taste and the flavours of our produce and enables us to give you a delightful culinary experience as well as good nutrition.",
+  company_name: "La Granja de Lola",
+  image_url: "https://www.ayojon.mx/galeria/2018/04/43716_m.jpg",
+  user: user
+  )
+product = Product.new(
+    name: "Corn",
+    description: "Organically grown corn from the Tarragona region",
+    category: "Vegetables",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1551754655-cd27e38d2076?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Leek",
+    description: "Organically grown leek from the Tarragona region",
+    category: "Vegetable",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1568647383371-b3df9ba396d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Pears",
+    description: "Organically grown pears from the Tarragona region",
+    category: "Vegetables",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1514756331096-242fdeb70d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Calçots",
+    description: "Prize winning organically grown calçots from the Tarragona region",
+    category: "Vegetables",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://upload.wikimedia.org/wikipedia/commons/2/25/Paret_de_cal%C3%A7ots.jpg",
+    user: user
+    )
+product.save
+
+puts 'Creating single vendor 3'
+
+user = User.create(
+  email: "OrganicGo@gmail.com",
+  password: "password",
+  first_name: "Mary",
+  last_name: "McManus",
+  address: "Vilanova i la Geltrú",
+  role: 1
+  )
+vendor = VendorInfo.create(
+  description: "At Cava Galore, we understand that the long production process of our cavas starts with the land and the vines. For this reason, our environmental awareness is understood as the result of the close ties between the process of making our products and our natural environment. The outcome of this effort is the fact that each day we are increasingly more respectful of the environment around us, thanks to our conviction and responsibility (this word is important; we believe we must take responsibility for our processes, as the environment belongs to us all, and it is the duty of each person to act in keeping with his/her possibilities). Proof of this responsibility resides in the fact that in 1999 we became the first cava company to earn the ISO14001 Certificate for Environmental Management. This environmental certificate was the result of many years of implementing improvements in each of the production processes, the underlying principle of which was prevention rather than treatment. Minimisation at the point of origin is key to all productive and environmental efficiency. It is a responsible stance towards our environment.",
+  company_name: "Cava Galore",
+  image_url: "https://lh3.googleusercontent.com/proxy/0mESUH6LoBGn6r-zhGuifPnuEgXelkec4Xu3PKIZGfyXqo7h9F4miMd3hGFjDqPVDv_0zoEX4iCawrdq35BphfjezKde09qc4b7WfV3-z2IpLsps7J_0Kr95kEZAZw4RjHq6nZSsRC5W",
+  user: user
+  )
+product = Product.new(
+    name: "Cava Condal",
+    description: "Our bestselling cava from the Barcelona region",
+    category: "Wines",
+    unit_price: rand(5..10),
+    unit: "liter",
+    image_url: "https://www.cofamavins.com/wp-content/uploads/Cami-de-Flors-Org.png",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Cava Rosé",
+    description: "Pure Srinkly Pink Potential to brighten up your day",
+    category: "Wines",
+    unit_price: 15,
+    unit: "liter",
+    image_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.de%2Fpin%2F188306828152981858%2F&psig=AOvVaw15H6JZJko7X5DhNE93cW1w&ust=1601120490395000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJC4pOKchOwCFQAAAAAdAAAAABAH",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Cava Brut",
+    description: "An attractive mix of Pinot Noir and Chardonnay",
+    category: "Wines",
+    unit_price: rand(1..5),
+    unit: "liter",
+    image_url: "https://www.cofamavins.com/wp-content/uploads/Dignitat-cava.png",
+    user: user
+    )
+product.save
+
+puts 'Creating single vendor 4'
+
+user = User.create(
+  email: "Bettaglio@gmail.com",
+  password: "password",
+  first_name: "Martín",
+  last_name: "Bettaglio",
+  address: "Altafulla",
+  role: 1
+  )
+vendor = VendorInfo.create(
+  description: "Bettaglio Bread is proud to use organic and local ingredients from the cold-pressed, extra-virgin 100% Italian olive oil down to the unsalted butter, artisanally made from milk sourced from pasture-fed cows in Britain. Most of our flour is organic and stone ground in Molina Tarragona, a mill in Altafulla dating back to medieval times.
+  Using organic flours means every batch is different, requiring the baker’s keen and observant eye like an orchestra conductor to harmoniously pull every element together.
+  With no added soya or gluten, it is entirely in the hands of the baker to effect the miracle of transforming soft powder to dense loaves. Every week we receive a different batch of flour, and every week we need to think about how that particular flour is going to work. Being the product of the soil and the weather, each batch will react slightly differently to water, yeast and temperature.",
+  company_name: "Bettaglio Bread",
+  image_url: "https://www.theladders.com/wp-content/uploads/baker_190422-800x450.jpg",
+  user: user
+  )
+product = Product.new(
+    name: "Barra Pirineu",
+    description: "A meal's not a meal without this traditional barra on your dining table",
+    category: "Bread",
+    unit_price: rand(3..5),
+    unit: "loaf",
+    image_url: "https://www.salamanca24horas.com/images/showid/3133090",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Coca de Cristal",
+    description: "Our coca is made with organically farmed spelt and a lot of love",
+    category: "Bread",
+    unit_price: 9,
+    unit: "loaf",
+    image_url: "https://4.bp.blogspot.com/-2pnWhecvt8Y/Uy4U-s4IfII/AAAAAAAAFJc/8J5PEn5DU44/s1600/pan+de+cristal+065.jpg",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Palmera de chocolate",
+    description: "A generously sized palmera dipped in high quality chocolate",
+    category: "Bread",
+    unit_price: rand(1..5),
+    unit: "piece",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTbMEYFzjGavmhciXrHtvl1o6gBhKUrnYScDg&usqp=CAU",
+    user: user
+    )
+product.save
+
+# buyers
+# buyers general
 
 5.times do |i|
   user = User.create(
