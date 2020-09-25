@@ -34,7 +34,7 @@
         <div class="btn-container">
 
           <% if current_user %>
-              <p class="dashboard"><%= link_to "Dashboard", root_path %></p>
+              <p class="dashboard"><%= link_to "Dashboard", dashboard_path %></p>
               <p class="sign-out-btn"><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %></p>
           <% else %>
               <p class="sign-in-btn"><%= link_to "Sign In", new_user_session_path %></p>
@@ -51,11 +51,20 @@
         <nav class="sidebar"> 
           <ul>
             <h3>Shopping cart:</h3>
+            <% price_item = 0 %>
+            <% if Order.find_by(user: current_user, status: "new") %>
               <% Order.find_by(user: current_user, status: "new").order_items.each do |item| %>
                 <li class="list-item-cart">
                   <span> <%= item.quantity %> X <%= item.product.name %></span>  <span> <%= item.price %> </span>
                 </li>
+                <% price_item += item.price %>
+              <% end %>
             <% end %>
+
+
+            <div class='total-price'> <span>Total price:</span><%= price_item %></div>
+
+
           </ul>
         </nav>
       </div>
