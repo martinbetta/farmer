@@ -60,7 +60,7 @@ user = User.create(
 vendor = VendorInfo.create(
   description: "Peter's Organic Farm is located in the Province of Girona. Farmer Peter started the business here in 1987, and we’ve been growing organic fruits ever since. If you’re ever nearby, you’re more than welcome to come for a walk (the view, across fields and wood-shrouded hills, is a bit of a show-stopper). Or join us for a warm apple pie and a freshly squeezed juice at the Peter's Bistrot ;-)",
   company_name: "Peter's Organic Farm",
-  image_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Ffarmer&psig=AOvVaw3BBIzEXKQrb_7HBAo00zqb&ust=1601116691053000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCz2M6OhOwCFQAAAAAdAAAAABAE",
+  image_url: "https://images.unsplash.com/photo-1535090467336-9501f96eef89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
   user: user
   )
 product = Product.new(
@@ -69,7 +69,7 @@ product = Product.new(
     category: "Fruits",
     unit_price: rand(1..5),
     unit: "kg",
-    image_url: "https://unsplash.com/photos/DapP9j2DJMQ",
+    image_url: "https://images.unsplash.com/photo-1507260385058-676ee3f043e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     user: user
     )
 product.save
@@ -195,7 +195,7 @@ product = Product.new(
     category: "Wines",
     unit_price: 15,
     unit: "liter",
-    image_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.de%2Fpin%2F188306828152981858%2F&psig=AOvVaw15H6JZJko7X5DhNE93cW1w&ust=1601120490395000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJC4pOKchOwCFQAAAAAdAAAAABAH",
+    image_url: "https://5barricas.valenciaplaza.com/wp-content/uploads/2020/02/5b-200213-tantum-ergo-rose.jpg",
     user: user
     )
 product.save
@@ -258,6 +258,101 @@ product = Product.new(
     user: user
     )
 product.save
+
+puts 'Creating single vendor 5'
+
+user = User.create(
+  email: "SauvageSuave@gmail.com",
+  password: "password",
+  first_name: "Kevin",
+  last_name: "Sauvage",
+  address: "Granollers",
+  role: 1
+  )
+vendor = VendorInfo.create(
+  description: "We run a small scale farme outside, but close to Barcelona. Our specialisation is egg production with the best birds in Spain. Our egg yolks are more yellow than the sun.",
+  company_name: "Oeufs Sauvages",
+  image_url: "https://firehouse.studio/PaulOM/wp-content/uploads/2017/09/Organic_Egg_Farmer.jpg",
+  user: user
+  )
+product = Product.new(
+    name: "Ostrich eggs",
+    description: "Proteine bombs for pros!",
+    category: "Eggs",
+    unit_price: 10,
+    unit: "a pair",
+    image_url: "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_1460,h_1947/at%2Farchive%2Fd0067ce854eb9ef5d249850ddadb741c42a028a8",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Quail eggs",
+    description: "Organic quail eggs from happy hens",
+    category: "Eggs",
+    unit_price: 5,
+    unit: "a dozen",
+    image_url: "https://lekkertafelen.nl/wp-content/uploads/2016/03/Kwarteleieren.jpg",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Goose eggs",
+    description: "Premium quality organic eggs from wild geese",
+    category: "Eggs",
+    unit_price: rand(3..5),
+    unit: "a dozen",
+    image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTbMEYFzjGavmhciXrHtvl1o6gBhKUrnYScDg&usqp=CAU",
+    user: user
+    )
+product.save
+
+puts 'Creating single vendor 6'
+
+user = User.create(
+  email: "farmer_marin@gmail.com",
+  password: "password",
+  first_name: "Marin",
+  last_name: "Bibot",
+  address: "Sant Cugat de Vallès",
+  role: 1
+  )
+vendor = VendorInfo.create(
+  description: "Marin's Orchard is located in the Province of Barcelona. Marin started the business here in 1987, and we’ve been growing organic fruits ever since. If you’re ever nearby, you’re more than welcome to come for a walk (the view, across fields and wood-shrouded hills, is a bit of a show-stopper). Or join us for a warm apple pie and a freshly squeezed juice at the Peter's Bistrot ;-)",
+  company_name: "Marin's Orchard",
+  image_url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/06/22/11/strawberry-farm-worker.jpg",
+  user: user
+  )
+product = Product.new(
+    name: "Apples Royal Gala",
+    description: "Royall Gala from the Barcelona region",
+    category: "Fruits",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1576673442511-7e39b6545c87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=708&q=80",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Prunes",
+    description: "Perfect prunes to boost your digestive system",
+    category: "Fruits",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1503267509980-772860efc568?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80",
+    user: user
+    )
+product.save
+product = Product.new(
+    name: "Strawberries",
+    description: "Super sumptuous and healthy strawberries",
+    category: "Fruits",
+    unit_price: rand(1..5),
+    unit: "kg",
+    image_url: "https://images.unsplash.com/photo-1522865389096-9e6e525333d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+    user: user
+    )
+product.save
+
 
 # buyers
 # buyers general
