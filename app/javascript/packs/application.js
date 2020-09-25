@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import "slick-carousel";
+import { display } from "../channels/dashboard";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -68,7 +69,8 @@ const slide = () => {
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  slide()
+  slide();
+  display()
 });
 
 const toggleSidebar = () => {
