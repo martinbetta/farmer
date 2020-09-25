@@ -45,26 +45,20 @@
         </div>
       </div>
 
-  <input type="checkbox" id="slide" name="" value="" />
-	<div class="container">
-		<label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
-		<nav class="sidebar"> 
-			<ul>
-        <h3>Shopping cart:</h3>
-				  <% i = 0 %>
-          <% Order.find_by(user: current_user, status: "new").order_items.uniq.each do |item| %>
-            <li class="list-item-cart">
-              <% i += 1 %>
-              <% if item == item  %>
-                <%= i  %>  <span> <%= item.product.name %> </span> <span><%= item.quantity %></span>  <span><%= item.price + item.price %> </span> </br>
-              <% else %>
-                <%= i  %>  <%= item.product.name %> <%= item.quantity %> <%= item.price %> </br>
-              <% end %>
-            </li>
-        <% end %>
-			</ul>
-		</nav>
-	</div>
+      <input type="checkbox" id="slide" name="" value="" />
+      <div class="container">
+        <label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
+        <nav class="sidebar"> 
+          <ul>
+            <h3>Shopping cart:</h3>
+              <% Order.find_by(user: current_user, status: "new").order_items.each do |item| %>
+                <li class="list-item-cart">
+                  <span> <%= item.quantity %> X <%= item.product.name %></span>  <span> <%= item.price %> </span>
+                </li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
 
     </div>
     <%= yield %>
