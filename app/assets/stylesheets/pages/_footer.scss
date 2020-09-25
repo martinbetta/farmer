@@ -1,6 +1,14 @@
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 150px;
+}
+
 footer{
   background-color: Black;
   position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
   p{
     text-align: center;
@@ -30,6 +38,6 @@ margin-bottom: 20px
 
 }
 .padding-footer{
-  padding: 30px;
+  padding-top: 20px;
   position: relative
 }
