@@ -45,7 +45,9 @@
   padding-top: 25px
 }
 
-.carousel-item img {
+.carousel-item  img{
+  max-width: 580px;
+  max-height: 500px;
   border-radius: 10px;
 }
 
