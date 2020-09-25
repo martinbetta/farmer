@@ -18,10 +18,12 @@
     color: $light-gray;
 }
 .banner-text h1 {
+    letter-spacing: 2px;
     font-size: 3em;
 }
 .banner-text p {
     font-size: 1.4em;
+    letter-spacing: 2px;
 }
 
 .banner-text p:nth-child(3) {
