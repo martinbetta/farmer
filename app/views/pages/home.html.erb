@@ -10,13 +10,14 @@
 
 
 <div class="container slick-container">
-    <p>Category:</p>
     <div class="items">
         <% Product::CATEGORIES.each do |category|  %>
-          <a class='icon' href='/products?search=<%= category %>'>
-          <div class="category-card" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)"></div>
-          <p class="category-name"> <%= category %> </p>
-          </a>
+          <div class="container-card">
+            <a class='icon' href='/products?search=<%= category %>'>
+            <div class="category-card" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)"></div>
+            <p class="category-name"> <%= category %> </p>
+            </a>
+          </div>
         <% end %>
     </div>
 </div>
