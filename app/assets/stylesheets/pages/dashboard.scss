@@ -18,6 +18,10 @@
   margin-left: 10px
 }
 
+.btn p {
+  text-decoration: none
+}
+
 .date-price-status-box {
   display:flex;
   justify-content: space-between;
@@ -36,4 +40,8 @@
 
 .tab-content {
   height: 70vh;
+}
+
+.nav {
+  margin-top: 15px
 }
