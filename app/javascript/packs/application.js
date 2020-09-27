@@ -25,7 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import "slick-carousel";
-import { display } from "../channels/dashboard";
+import { collapseOnClick } from "../channels/dashboard";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -81,6 +81,7 @@ document.addEventListener('turbolinks:load', () => {
   $("#slide").on("click tap", function() {
     toggleSidebar();
   });
+  collapseOnClick();
 });
 
 
