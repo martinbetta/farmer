@@ -67,6 +67,9 @@
             <% end %>
 
           </ul>
+          <%= simple_form_for Order.find_by(user: current_user, status: ["new", "paying"]) do |f| %>
+            <%= f.submit  %>
+          <% end %>
         </nav>
       </div>
 

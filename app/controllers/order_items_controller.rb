@@ -1,4 +1,7 @@
 class OrderItemsController < ApplicationController
+  def show
+    @order = current_user.orders.find(params[:id])
+  end
 
   def create
 
@@ -24,11 +27,8 @@ class OrderItemsController < ApplicationController
   end
 
 
-
-  def update
-  end
-
   def delete
+    
   end
 
   private

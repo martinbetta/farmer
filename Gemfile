@@ -36,6 +36,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
+gem 'stripe'
+gem "money-rails"
+gem 'stripe_event'
 
 group :development, :test do
   gem 'pry-byebug'
