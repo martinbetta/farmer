@@ -12,4 +12,16 @@ class Product < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  # Product.last.avg_score
+
+  def avg_score
+    total = self.reviews.sum(:rating)
+
+    if self.reviews.count > 0
+      total.to_f / self.reviews.count
+    else
+      0
+    end
+  end
 end
