@@ -1,15 +1,20 @@
 <div class="container">
   <div class="filters-container">
     <% if params[:search] %>
-      <a href="/products?<%= 'vendor=' + params[:vendor] if params[:vendor].present? %>">
+      <a href="<%= generate_index_route(params.except(:search)) %>">
         <span class="badge filter-badge"><%= params[:search]  %> <i class="fas fa-times-circle"></i></span>
       </a>
     <% end %>
 
     <% if params[:vendor] %>
-    <a href="/products?<%= 'search=' + params[:search] if params[:search].present? %>">
-      <span class="badge filter-badge"><%= params[:vendor]  %> <i class="fas fa-times-circle"></i></span>
-    </a>
+      <a href="<%= generate_index_route(params.except(:vendor)) %>">
+        <span class="badge filter-badge"><%= params[:vendor]  %> <i class="fas fa-times-circle"></i></span>
+      </a>
+    <% end %>
+    <% if params[:location] %>
+      <a href="<%= generate_index_route(params.except(:location)) %>">
+        <span class="badge filter-badge"><%= params[:location]  %> <i class="fas fa-times-circle"></i></span>
+      </a>
     <% end %>
   </div>
    <div>
@@ -35,12 +40,12 @@
       </div>
     </div>
     <div class="col-3">
-                 <div>
-      <h4>Filter by Category:</h4>
-    </div>
+      <div>
+        <h4>Filter by Category:</h4>
+      </div>
       <div class="grid-cat">
         <% Product::CATEGORIES.each do |category|  %>
-          <a href="/products?search=<%= category %><%= '&vendor=' + params[:vendor] if params[:vendor].present? %>">
+          <a href="<%= generate_index_route(params.merge(search: category)) %>">
           <div class="category-card-sidebar" style="background-image: url(<%= asset_path("#{category.downcase.tr(" ","_")}.png") %>)">
           </div>
          <p class='category-name'> <%=category%></p>
@@ -55,12 +60,24 @@
       <div class= "index_producer">
       <h4>Filter by Producer:</h4>
         <% @producers.each do |producer| %>
-        <a class='vendor-name-index' href="/products?vendor=<%= producer.vendor_info.company_name %><%= '&search=' + params[:search] if params[:search].present? %>">
+        <a class='vendor-name-index' href="<%= generate_index_route(params.merge(vendor: producer.vendor_info.company_name)) %>">
           <p> <%= producer.vendor_info.company_name %></p>
         </a>
         <% end %>
       </div>
-
+      <div class= "index_location">
+      <form action="/products"  method="GET">
+        <input type="text" name="location">
+        <%# <input type="text" id="latlon" /> %>
+        <% if params[:search]  %>
+          <input type="hidden" name="search" value="<%= params[:search] %>">
+        <% end %>
+        <% if params[:vendor] %>
+          <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
+        <% end %>
+        <input type="submit" value="Search">
+      </form>
+      </div>
     </div> <!---- closing the col-3 ---->
   </div> <!---- closing the row div ---->
 </div> <!---- closing the container div ---->
