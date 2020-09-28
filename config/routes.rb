@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :products, only: [:index, :show] do
     resources :order_items, only: [:create]
+    resources :reviews, only: [:create]
   end
   resources :orders, only: [:create]
   get '/dashboard', to: 'pages#dashboard'
