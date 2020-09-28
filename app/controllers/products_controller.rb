@@ -18,5 +18,13 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @order_item = OrderItem.new
     @vendor = @product.user.vendor_info
+
+    @vendor_user = @product.user
+    @markers = [
+      {
+        lat: @vendor_user.latitude,
+        lng: @vendor_user.longitude
+      }
+    ]
   end
 end
