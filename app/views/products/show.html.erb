@@ -28,7 +28,7 @@
 
       <div class="address-review-container">
         <h6><%= @product.user.address %></h6>
-        <h6>(Reviews stars field)</h6>
+        <h6>Rating: <%= @product.avg_score %></h6>
       </div>
 
       <div class="description-container">
@@ -72,7 +72,8 @@
         </div>
         <div class="vendor-info" style="margin-left: 40px">
           <h2><%= @vendor.company_name %></h2>
-          <h6>(Reviews stars field)</h6>
+
+          <h6> <%= @vendor.user.avg_score %></h6>
           <h6><%= @vendor.description %></h6>
 
         </div>
@@ -115,8 +116,7 @@
       <% @product.reviews.each do |review| %>
         <p>User: <%= review.user.first_name %> <%= review.user.last_name %></p>
         <p> Review: <%= review.content %></p>
-        <p>Rating <%= review.rating %>/5 Stars</p>
-        <hr>
+        <p>Rating <%= review.rating %>/5 Stars</p><hr>
 
       <% end %>
     </div>
