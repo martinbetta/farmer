@@ -26,11 +26,11 @@ require("channels")
 import "bootstrap";
 import "slick-carousel";
 import { collapseOnClick } from "../channels/dashboard";
-
+import { initCart } from "../plugins/cart";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
-const slide = () => { 
+const slide = () => {
   $('.items').slick({
     dots: true,
     infinite: false,
@@ -71,17 +71,21 @@ const toggleSidebar = () => {
   const toggle = document.querySelector('#toggle')
   if (checkbox.checked == true) {
     toggle.innerHTML = "<i class='fas fa-times'></i>";
-  } else {  
+  } else {
     toggle.innerHTML = "<i class='fas fa-shopping-cart'></i>"
   };
 };
 
 document.addEventListener('turbolinks:load', () => {
   slide();
+
   $("#slide").on("click tap", function() {
     toggleSidebar();
   });
+
   collapseOnClick();
+
+  initCart();
 });
 
 
