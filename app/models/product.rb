@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   include PgSearch::Model
   CATEGORIES = ['Fruits', 'Vegetables','Bread', 'Milk', 'Eggs', 'Juices', 'Wines', 'Boxes & Packs', 'Other'].freeze
   belongs_to :user
+  has_many :reviews
   has_one_attached :photo
 
 

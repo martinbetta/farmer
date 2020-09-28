@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :orders
   has_many :products
+  has_many :reviews
   has_one :vendor_info
   validates :first_name, :last_name, :address, :role, presence: true
 
