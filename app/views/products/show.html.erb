@@ -28,11 +28,15 @@
 
       <div class="address-review-container">
         <h6><%= @product.user.address %></h6>
-        <h6>Rating: <%= @product.avg_score %></h6>
+        <h6><% @product.avg_score.to_i.times do  %>
+              <i class="fas fa-star text-info"></i>
+            <% end %>
+        </h6>
       </div>
 
       <div class="description-container">
         <p><%= @product.description %></p>
+
       </div>
 
       <div class="price-container d-flex">
@@ -73,14 +77,21 @@
         <div class="vendor-info" style="margin-left: 40px">
           <h2><%= @vendor.company_name %></h2>
 
-          <h6> <%= @vendor.user.avg_score %></h6>
+           <h6> <% if @vendor.user.avg_score > 0 %>
+            <%@vendor.user.avg_score.to_i.times do  %>
+            <i class="fas fa-star text-info"></i>
+            <% end %>
+            <% else %>
+            <%= " " %>
+            <% end %>
+
           <h6><%= @vendor.description %></h6>
 
         </div>
       </div>
       <!------------------ GEO MAP -------------------->
       <div id="map"
-        style="width: 100%; height: 400px;"
+        style="width: 100%; height: 350px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
@@ -116,7 +127,10 @@
       <% @product.reviews.each do |review| %>
         <p>User: <%= review.user.first_name %> <%= review.user.last_name %></p>
         <p> Review: <%= review.content %></p>
-        <p>Rating <%= review.rating %>/5 Stars</p><hr>
+        <h6><%review.rating.to_i.times do  %>
+            <i class="fas fa-star text-info"></i>
+            <% end %>
+        </h6><hr>
 
       <% end %>
     </div>

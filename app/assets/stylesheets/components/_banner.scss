@@ -9,7 +9,7 @@
 }
 
 .banner-text {
-    padding: 190px 0px;
+    padding: 150px 0px;
 }
 
 .banner-text h1, 
@@ -29,28 +29,84 @@
 .banner-text p:nth-child(3) {
     margin-top: 50px;
 }
+.banner-search {
+    margin-top: 10px;
+    position: relative;
+    width: 600px;
+    border: none;
+    outline: none;
+}
+.marker-banner {
+    position: absolute;
+    right: 50px;
+}
+.marker-banner > .fas {
+    font-size: 25px;
+    padding: 5px;
+}
+.loc-input-banner {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 20px;
+    background-color:  #ffb1acbe;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.loc-input-banner::placeholder {
+    color: rgb(255, 255, 255);
+}
+.search-btn-banner {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    border-radius: 0 15px 15px 0px;
+    width: 50px;
+    background-color:$red;
+    outline: none;
+    border: none;
+    &:focus {
+        outline:none;
+    }
+}
+
 
 /*  Second banner*/
 
 .secondary-banner {
-    background: #44a529;
-    height: 50vh;
-    text-align: center;
-    color: #FEFEFE;
-    padding-top: 20px;
-
+    display: flex;
+    background: #729d39;
+    height: 600px ;
+    color: #fbfad3;
+    width: 100%;
 }
 
-.secondary-banner h2 {
-    padding: 50px;
+.secondary-banner-img {
+    background: linear-gradient(90deg, rgba(114,157,57,0) 0%, rgba(114,157,57,1) 100%), image-url("secondary-banner.jpg");
+    width: 60%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.secondary-banner-text {
+    width: 40%;
+    padding: 40px;
+    margin: 40px 0px;
+}
+.secondary-banner-text-title {
     font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 100px;
+    font-weight: bold;
 }
 
 .secondary-banner p {
-    font-size: 20px;
-    padding: 50px;
-
+    font-size: 1.3em;
+    width: 65%;
 }
+
 
 
 /* Banner label */

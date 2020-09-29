@@ -3,7 +3,21 @@
         <div class="banner-text">
             <h1>Eat fresh, local, and responsible.</h1>
             <p>Join us in making cities more sustainable.</p>
-            <p class='see-all-products'><%= link_to "See all products", products_path %></p>
+
+            <%= link_to products_path, class: 'link-block' do %>
+                <div class='see-all-products-btn'>See all products</div>
+            <% end %>
+            <form action="/products"  method="GET" class="banner-search">
+                <input type="text" name="location" class="loc-input-banner location-input" placeholder="Search by location" autocomplete="off">
+                <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
+                <button class="search-btn-banner" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="current-location btn marker-banner">
+                    <i class="fas fa-map-marker-alt "></i>
+                </button>
+            </form>
+
         </div>
     </div>
 </div>
@@ -23,14 +37,16 @@
 </div>
 
 <div class="secondary-banner">
-    <div class="container">
-        <h2>Our local promise</h2>
-        <p>Conscious of environmental issues and the concerns of our customers, 
-        we are constantly developing our range of fruits and vegetables, 
-        notably by offering an extensive range of locally sourced produce.
-        We support organic certified small holder farmers by providing a market 
-        for their produce giving them fair pricing to encourage produce sustainability.</p>
+    <div class="secondary-banner-img"></div>
+    <div class="secondary-banner-text">
+        <h2 class="secondary-banner-text-title">Fresh Locally Grown</h2>
+        <p>At Greendale Farm Shop we're always looking for fantastic local produce - 
+        if it's high in quality and low in food miles, we want it on our shelves. 
+        We're particularly proud of our selection of delicious, 
+        locally-grown veg, available at the Farm Shop and on our website.</p>
+        <%= link_to "Start shopping", products_path, class: "start-shopping-btn" %>
     </div>
+
 </div>
 
 <div class="container cont-label">
@@ -42,7 +58,7 @@
     <div class="card-label">
         <div class="label"><i class="fas fa-shield-alt"></i></div>
         <h2>Secure Online Payment</h2>
-        <p>Order payments on our site are encrypted and handled directly by Mastercard or Visa.</p>
+        <p>Order payments on our site are encrypted and handled directly by Mastercard or Visa</p>
     </div>  
     <div class="card-label">
         <div class="label"><i class="fas fa-headset"></i></div>

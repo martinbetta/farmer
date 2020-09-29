@@ -40,8 +40,30 @@
       </div>
     </div>
     <div class="col-3">
+      
+      <div class= "index_location">
+        <h4>Filter by location</h4>
+        <form action="/products"  method="GET">
+        <div class="search-box">
+          <input type="text" name="location" class="location-input" placeholder="Add new address..">
+          <button class="search-btn" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+          </div>
+          <% if params[:search]  %>
+            <input type="hidden" name="search" value="<%= params[:search] %>">
+          <% end %>
+          <% if params[:vendor] %>
+            <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
+          <% end %>
+          <button class="current-location btn">
+            <i class="fas fa-map-marker-alt">&emsp;Share my location</i>
+          </button>
+        </form>
+      </div>
+
       <div>
-        <h4>Filter by Category:</h4>
+        <h4>Filter by Category</h4>
       </div>
       <div class="grid-cat">
         <% Product::CATEGORIES.each do |category|  %>
@@ -58,33 +80,12 @@
          See all products
       </a>
       <div class= "index_producer">
-      <h4>Filter by Producer:</h4>
+      <h4>Filter by Producer</h4>
         <% @producers.each do |producer| %>
         <a class='vendor-name-index' href="<%= generate_index_route(params.merge(vendor: producer.vendor_info.company_name)) %>">
           <p> <%= producer.vendor_info.company_name %></p>
         </a>
         <% end %>
-      </div>
-
-      <div class= "index_location">
-        <form action="/products"  method="GET">
-
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          </div>
-          
-          <input type="text" name="location" class="location-input">
-            <% if params[:search]  %>
-              <input type="hidden" name="search" value="<%= params[:search] %>">
-            <% end %>
-            <% if params[:vendor] %>
-              <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
-            <% end %>
-            <button class="current-location btn btn-info">
-              <i class="fas fa-map-marker-alt"></i>
-            </button>
-          <input type="submit" value="Search">
-        </form>
       </div>
 
     </div> <!---- closing the col-3 ---->

@@ -5,26 +5,36 @@
 .sign-in-btn a,
 .sign-up-btn a,
 .sign-out-btn a,
+
 .dashboard a {
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
-.banner-text p a {
-    background-color: $red;
-    padding: 10px 15px;
-    border-radius: 2px;
-    color: white;
-    text-decoration: none;
-    margin-top: 50px;
-    font-weight: normal;
-    font-size: 17px;
-
+.see-all-products:hover {
+    color:  #fbfad3 ;
 }
 
+.see-all-products-btn {
+    line-height: 50px;
+    font-weight: bold;
+    color: #fbfad3 ;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: 70px;
+    background-color:$red;
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.link-block:hover{
+    text-decoration: none;
+}
 .add-to-cart {
-    background-color: #fd5e53;
+    background-color:$red;
     border-radius: 14px;
     color: white;
     width: 200px;
@@ -35,10 +45,11 @@
 .button-all-products {
     background-color: $red;
     border-radius: 5px;
-    margin-top: 10px;
-    font-weight: normal;
+    margin-top: 15px;
+    font-weight: bold;
     width:100%;
 }
+
 .btn-checkout{
   background-color: $red;
   border-radius: 5px;
@@ -48,3 +59,16 @@
   text-align: center;
 }
 
+
+.start-shopping-btn {
+    border: 3px solid  #fbfad3;
+    color: #fbfad3;
+    padding: 10px 15px;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.start-shopping-btn:hover {
+    color: #fbfad3 ;
+}
