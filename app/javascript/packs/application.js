@@ -27,9 +27,6 @@ import "bootstrap";
 import "slick-carousel";
 import { collapseOnClick } from "../channels/dashboard";
 import { initCart } from "../plugins/cart";
-
-// Internal imports, e.g:
-import { collapseOnClick } from "../channels/dashboard";
 import { initMapbox } from '../channels/init_mapbox';
 // import { GetUserCoordinates } from "../channels/user_coords";
 

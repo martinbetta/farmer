@@ -1,5 +1,6 @@
 class OrderItemsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:update, :destroy]
+
   def show
     @order = current_user.orders.find(params[:id])
   end
@@ -37,6 +38,7 @@ class OrderItemsController < ApplicationController
       format.html
       format.json { render json: { order_item: @order_item, subtotal: @order_item.order.subtotal} }
     end
+  end
 
   private
 

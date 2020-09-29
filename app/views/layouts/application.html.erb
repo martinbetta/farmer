@@ -86,28 +86,6 @@
 
         </div>
       </div>
-      <input type="checkbox" id="slide" name="" value="" />
-      <div class="container">
-        <label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
-        <nav class="sidebar">
-          <ul>
-            <h3>Shopping cart:</h3>
-            <% price_item = 0 %>
-            <% if Order.find_by(user: current_user, status: "new") %>
-              <% Order.find_by(user: current_user, status: "new").order_items.each do |item| %>
-                <li class="list-item-cart">
-                  <span> <%= item.quantity %> <%= item.product.unit %> <%= item.product.name %></span>  <span> <%= item.price %> </span>
-                </li>
-                <% price_item += item.price %>
-              <% end %>
-              <div class='total-price'> <span>Total price:</span><%= price_item %></div>
-              <%= simple_form_for Order.find_by(user: current_user, status: ["new", "paying"]) do |f| %>
-                <%= f.submit  %>
-              <% end %>
-            <% end %>
-          </ul>
-        </nav>
-      </div>
     </div>
     <%= yield %>
 
