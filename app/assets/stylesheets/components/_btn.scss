@@ -5,34 +5,34 @@
 .sign-in-btn a,
 .sign-up-btn a,
 .sign-out-btn a,
+
 .dashboard a {
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
-.see-all-products {
-    padding: 20px;
-    line-height: 50px;
-    font-weight: bold;
-    color: #fbfad3 ;
-    font-size: 20px;
-    letter-spacing: 2px;
-}
 .see-all-products:hover {
     color:  #fbfad3 ;
 }
 
 .see-all-products-btn {
+    line-height: 50px;
+    font-weight: bold;
+    color: #fbfad3 ;
+    font-size: 20px;
+    letter-spacing: 2px;
     margin-top: 70px;
     background-color:$red;
     width: 600px;
     height: 50px;
     text-align: center;
     border-radius: 15px;
+
 }
-
-
+.link-block:hover{
+    text-decoration: none;
+}
 .add-to-cart {
     background-color:$red;
     border-radius: 14px;
