@@ -15,7 +15,8 @@ class Order < ApplicationRecord
 
   def subtotal
     if self.order_items.size > 1
-      self.order_items.inject { |sum, current| sum.total_price + current.total_price }
+      total = self.order_items.inject { |sum, current| sum.total_price_cents + current.total_price_cents }
+      ActionView::Base.new.humanized_money(total)
     elsif self.order_items.size == 0
       0
     else

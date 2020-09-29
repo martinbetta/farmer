@@ -33,7 +33,6 @@ import { collapseOnClick } from "../plugins/dashboard";
 import { initMapbox } from '../plugins/init_mapbox';
 import { GetUserCoordinates } from "../plugins/user_coords";
 
-
 const slide = () => {
   $('.items').slick({
     dots: true,
