@@ -13,7 +13,6 @@ class Product < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-    
 
 
   def avg_score
@@ -26,3 +25,4 @@ class Product < ApplicationRecord
     end
   end
 end
+
