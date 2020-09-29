@@ -34,20 +34,58 @@
         <div class="btn-container">
 
           <% if current_user %>
-                <p class="dashboard"><%= link_to "Dashboard", dashboard_path %></p>
-                <p class="sign-out-btn"><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %> </p>
+            <p class="dashboard"><%= link_to "Dashboard", dashboard_path %></p>
+            <p class="sign-out-btn"><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %> </p>
+            <% if @current_order %>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle bg-transparent border-0 py-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-shopping-cart"></i>
+                </button>
 
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <% @current_order.order_items.each do |item| %>
+                      <div class="dropdown-item" data-id="<%= item.id %>">
+                        <span>
+                          <button class="btn btn-info quantity-sub">
+                            <i class="fas fa-minus"></i>
+                          </button>
+
+                          <span class="quantity-for-item"> <%= item.quantity %> </span>
+
+                          <button class="btn btn-info quantity-add">
+                            <i class="fas fa-plus"></i>
+                          </button>
+
+                          <%= item.product.unit %>
+                          <%= item.product.name %>
+                        </span>
+
+                        <span>
+                          <%= item.total_price %>
+                        </span>
+
+                        <button class="btn btn-danger delete-item">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </div>
+                    <% end %>
+                    <div class='total-price'>
+                      <span>Total price:</span>
+                      <span id="subtotal"><%= @subtotal %></span>
+                    </div>
+                  </div>
+              </div>
+            <% end %>
           <% else %>
-          
+
               <p class="sign-in-btn"><%= link_to "Sign In", new_user_session_path %></p>
 
               <p class="sign-up-btn"><%= link_to  "Sign Up", new_user_registration_path %></p>
-              
+
           <% end %>
 
         </div>
       </div>
-
       <input type="checkbox" id="slide" name="" value="" />
       <div class="container">
         <label for="slide" class="toggle" id='toggle'> <i class="fas fa-shopping-cart"></i></label>
