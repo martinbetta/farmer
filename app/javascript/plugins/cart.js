@@ -11,7 +11,9 @@ const updateOrderItem = (quantityField, id, quantity) => {
     .then(response => response.json())
     .then((data) => {
       quantityField.innerText = data.order_item.quantity
+      quantityField.parentNode.nextElementSibling.innerText = data.item_total_price
       document.querySelector('#subtotal').innerText = data.subtotal
+
     });
 }
 
@@ -48,7 +50,9 @@ const removeQuantityItem = () => {
       const id = dropdownItem.dataset.id
       const currentQuantity = parseInt(item.nextElementSibling.innerText)
 
-      updateOrderItem(item.nextElementSibling, id, currentQuantity - 1)
+      if (currentQuantity > 1) {
+        updateOrderItem(item.nextElementSibling, id, currentQuantity - 1)
+      }
     }));
 }
 

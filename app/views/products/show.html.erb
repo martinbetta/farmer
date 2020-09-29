@@ -44,8 +44,8 @@
         <h5><strong>Qty</strong></h5>
         <%= simple_form_for [@product, @order_item], authenticity_token: true, remote: true do |f| %>
           <div class="def-number-input number-input">
-            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
-            <%= f.input :quantity, label: false %>
+            <button onclick="if (this.parentNode.querySelector('input[type=number]').value > 1) this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
+            <%= f.input :quantity, label: false, input_html: { value: 1 } %>
             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();  return false;" class="plus"></button>
           </div>
           <%= f.button :submit, 'Add to cart', class:"add-to-cart"%>
