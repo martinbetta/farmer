@@ -13,12 +13,12 @@
 
 .banner-text p a {
     background-color: $red;
-    padding: 10px 15px;
-    border-radius: 2px;
+    padding: 15px 20px;
+    border-radius: 3px;
     color: white;
     text-decoration: none;
     margin-top: 50px;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 17px;
 
 }
@@ -35,7 +35,20 @@
 .button-all-products {
     background-color: $red;
     border-radius: 5px;
-    margin-top: 10px;
-    font-weight: normal;
+    margin-top: 15px;
+    font-weight: bold;
     width:100%;
+}
+
+.start-shopping-btn {
+    border: 3px solid  #fbfad3;
+    color: #fbfad3;
+    padding: 10px 15px;
+    line-height: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.start-shopping-btn:hover {
+    color: #fbfad3 ;
 }
