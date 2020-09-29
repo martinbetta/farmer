@@ -11,20 +11,30 @@
     text-decoration: none;
 }
 
-.banner-text p a {
-    background-color: $red;
-    padding: 15px 20px;
-    border-radius: 3px;
-    color: white;
-    text-decoration: none;
-    margin-top: 50px;
+.see-all-products {
+    padding: 20px;
+    line-height: 50px;
     font-weight: bold;
-    font-size: 17px;
-
+    color: #fbfad3 ;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.see-all-products:hover {
+    color:  #fbfad3 ;
 }
 
+.see-all-products-btn {
+    margin-top: 70px;
+    background-color:$red;
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
 .add-to-cart {
-    background-color: #fd5e53;
+    background-color:$red;
     border-radius: 14px;
     color: white;
     width: 200px;

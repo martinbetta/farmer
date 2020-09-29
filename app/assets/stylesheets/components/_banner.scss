@@ -2,14 +2,14 @@
 
 .banner {
     background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%), image-url("bg4.jpg");
-    height: 700px;
+    height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom right;
 }
 
 .banner-text {
-    padding: 190px 0px;
+    padding: 150px 0px;
 }
 
 .banner-text h1, 
@@ -29,6 +29,49 @@
 .banner-text p:nth-child(3) {
     margin-top: 50px;
 }
+.banner-search {
+    margin-top: 10px;
+    position: relative;
+    width: 600px;
+    border: none;
+    outline: none;
+}
+.marker-banner {
+    position: absolute;
+    right: 50px;
+}
+.marker-banner > .fas {
+    font-size: 25px;
+    padding: 5px;
+}
+.loc-input-banner {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    padding-left: 20px;
+    background-color:  #ffb1acbe;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.loc-input-banner::placeholder {
+    color: rgb(255, 255, 255);
+}
+.search-btn-banner {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    border-radius: 0 15px 15px 0px;
+    width: 50px;
+    background-color:$red;
+    outline: none;
+    border: none;
+    &:focus {
+        outline:none;
+    }
+}
+
 
 /*  Second banner*/
 
@@ -69,7 +112,7 @@
 /* Banner label */
 
 .cont-label {
-    height: 500px;
+    height: 50vh;
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -104,8 +147,4 @@
     font-size: 1.4em;
     font-weight: bold;
     opacity: 0.8;
-}
-.card-label {
-    height: 100%;
-    margin-top: 50px;
 }

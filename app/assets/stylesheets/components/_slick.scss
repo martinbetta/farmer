@@ -27,10 +27,15 @@
     width: 90px !important;
     background-size: cover;
     background-position: center;
+    outline: none;
+
 }
 
 .icon {
     text-decoration: none;
+    &:focus {
+        outline: none;
+    }
 }
 .icon:hover {
     text-decoration: none;
