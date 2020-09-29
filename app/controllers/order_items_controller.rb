@@ -26,7 +26,7 @@ class OrderItemsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: { order_item: @order_item, subtotal: @order_item.order.subtotal } }
+      format.json { render json: { order_item: @order_item, item_total_price: @order_item.total_price, subtotal: @order_item.order.subtotal } }
     end
   end
 
@@ -36,7 +36,7 @@ class OrderItemsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: { order_item: @order_item, subtotal: @order_item.order.subtotal} }
+      format.json { render json: { order_item: @order_item, item_total_price: @order_item.total_price, subtotal: @order_item.order.subtotal} }
     end
   end
 
