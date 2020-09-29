@@ -110,4 +110,35 @@ margin-top: 50px;
 }
 
 //------------------------------ price filter
+.search-btn {
+  background-color: $red;
+  border-radius: 5px;
+  color: white;
+  border-style: none;
+  width: 30px;
+  height: 30px;
+}
 
+.current-location {
+  padding-left: 0px
+}
+
+.current-location:hover {
+  color: $orange
+}
+
+.index_location {
+  margin-bottom: 35px;
+}
+
+.index_location h4{
+  margin-bottom: 10px
+}
+
+.slidecontainer {
+  margin-top: 5px
+}
+
+#btn-current {
+  width: 30px;
+}
