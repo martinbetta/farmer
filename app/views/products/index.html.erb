@@ -52,10 +52,12 @@
         <h4><strong>Filter by location</strong></h4>
         <form action="/products"  method="GET">
         <div class="search-box">
-          <input type="text" name="location" class="location-input" placeholder="Add new address..">
-          <button class="search-btn" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
+          <div class="boxbox">
+            <input type="text" name="location" class="location-input" placeholder="Add new address..">
+            <button class="search-btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
           </div>
           <% if params[:search]  %>
             <input type="hidden" name="search" value="<%= params[:search] %>">
