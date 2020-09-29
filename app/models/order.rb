@@ -16,7 +16,7 @@ class Order < ApplicationRecord
   def subtotal
     if self.order_items.size > 1
       total = self.order_items.map{|item| item.total_price_cents}.inject(:+)
-      ActionView::Base.new.humanized_money(total)
+      ActionView::Base.new.humanized_money(total / 100)
     elsif self.order_items.size == 0
       0
     else

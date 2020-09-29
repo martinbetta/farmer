@@ -24,11 +24,7 @@
               <Strong>Delivery date: </Strong><%= order.delivery_date %>
             </div>
             <div class="total-price-box">
-            <% price_item = 0 %>
-            <% order.order_items.each do |i|  %>
-              <% price_item += i.total_price %>
-            <% end %>
-             <Strong>Total Price: </Strong>€ <%= price_item %>
+             <Strong>Total Price: </Strong>€ <%= @subtotal %>
             </div>
           </div>
         </div>
