@@ -55,8 +55,7 @@
 
 .producer-img-container img {
   border-radius: 10px;
-
-  width: 500px;
+  width: 420px;
 }
 
 .info-container p{
@@ -143,5 +142,10 @@ border-radius:3px
 
 .mapboxgl-canvas {
   margin-top: 20px
+}
+
+//----------------------------------------------REVIEW IN SHOW PAGE
+.card-review-show {
+display: flex;
 }
 

@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
     end
 
     @producers = near_vendors || User.where(role: :vendor)
+
   end
 
   def show
@@ -33,5 +34,5 @@ class ProductsController < ApplicationController
       }
     ]
   end
-  
+
 end

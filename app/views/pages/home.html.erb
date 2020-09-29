@@ -3,7 +3,21 @@
         <div class="banner-text">
             <h1>Eat fresh, local, and responsible.</h1>
             <p>Join us in making cities more sustainable.</p>
-            <p class='see-all-products'><%= link_to "See all products", products_path %></p>
+
+            <%= link_to products_path, class: 'link-block' do %>
+                <div class='see-all-products-btn'>See all products</div>
+            <% end %>
+            <form action="/products"  method="GET" class="banner-search">
+                <input type="text" name="location" class="loc-input-banner location-input" placeholder="Search by location" autocomplete="off">
+                <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
+                <button class="search-btn-banner" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="current-location btn marker-banner">
+                    <i class="fas fa-map-marker-alt "></i>
+                </button>
+            </form>
+
         </div>
     </div>
 </div>
