@@ -38,6 +38,10 @@
   color: #fd5e53;
 }
 
+.price-container h5 {
+  font-weight: bold;
+}
+
 
 .product-container {
   display: flex;
@@ -81,7 +85,7 @@
   left: 50px;
   top: -7px;
 }
-.quantity-container h6{
+.quantity-container h5{
   margin-top: 20px;
 }
 
@@ -135,5 +139,9 @@ border-radius:3px
 }
 
 
-//----------------------------------------------
+//----------------------------------------------MAPBOX
+
+.mapboxgl-canvas {
+  margin-top: 20px
+}
 

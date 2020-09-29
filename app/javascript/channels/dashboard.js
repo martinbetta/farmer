@@ -1,16 +1,19 @@
-// function display() {
-//     const b = document.getElementById("show-btn");
-//     const i = document.getElementById("order-box");
-//     b.addEventListener("click", function(){
-//       console.log("hola")
 
-//       if (i.style.display === "none") {
-//               i.style.display = "block";
-//           } else {
-//                   i.style.display = "none";
-//               }
-        
-//       })
-//     }
+const collapseOnClick = () => {
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
-//   export {display};
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+          content.style.display = "none";
+      } else {
+          content.style.display = "block";
+      }
+    });
+  };
+};
+
+export { collapseOnClick };

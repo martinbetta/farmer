@@ -30,6 +30,8 @@ gem 'devise'
 
 gem 'faker'
 
+gem 'geocoder'
+
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'autoprefixer-rails'

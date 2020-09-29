@@ -25,10 +25,12 @@ require("channels")
 // External imports
 import "bootstrap";
 import "slick-carousel";
-import { display } from "../channels/dashboard";
+
 
 // Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { collapseOnClick } from "../channels/dashboard";
+import { initMapbox } from '../channels/init_mapbox';
+// import { GetUserCoordinates } from "../channels/user_coords";
 
 const slide = () => { 
   $('.items').slick({
@@ -81,6 +83,9 @@ document.addEventListener('turbolinks:load', () => {
   $("#slide").on("click tap", function() {
     toggleSidebar();
   });
+  collapseOnClick();
+  initMapbox();
+  // GetUserCoordinates();
 });
 
 
