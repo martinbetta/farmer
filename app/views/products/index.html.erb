@@ -30,6 +30,9 @@
               </div>
               <div class="product-info">
                 <h4 class="bold-title"> <%= product.name %> </h4>
+
+                <%= render "products/rating", avg_score: product.avg_score %>
+
                 <h4 class="price-product-index"> <i class="fas fa-euro-sign"></i> <%= product.unit_price %> / <%= product.unit %> </h4>
                 <p class="category-name-small"><%= product.category %></p>
 
@@ -40,7 +43,7 @@
       </div>
     </div>
     <div class="col-3">
-      
+
       <div class= "index_location">
         <h4>Filter by location</h4>
         <form action="/products"  method="GET">
