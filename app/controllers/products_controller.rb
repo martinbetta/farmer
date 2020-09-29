@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   def index
     @products = Product.all
 
@@ -18,7 +19,6 @@ class ProductsController < ApplicationController
     @producers = near_vendors || User.where(role: :vendor)
   end
 
-
   def show
     @product = Product.find(params[:id])
     @order_item = OrderItem.new
@@ -33,4 +33,5 @@ class ProductsController < ApplicationController
       }
     ]
   end
+  
 end
