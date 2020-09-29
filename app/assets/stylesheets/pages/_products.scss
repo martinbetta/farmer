@@ -111,7 +111,8 @@ margin-top: 50px;
 
 //------------------------------ price filter
 .location-input {
-  width: 220px;
+  width: 100%;
+  position: relative
 }
 
 .location-input::placeholder {
@@ -124,6 +125,9 @@ margin-top: 50px;
   border-style: none;
   width: 30px;
   height: 30px;
+  position: absolute;
+  right: 0;
+  top: 38;
 }
 
 .current-location {
