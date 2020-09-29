@@ -4,6 +4,16 @@
             <h1>Eat fresh, local, and responsible.</h1>
             <p>Join us in making cities more sustainable.</p>
             <p class='see-all-products'><%= link_to "See all products", products_path %></p>
+
+            <form action="/products"  method="GET">         
+                <input type="text" name="location" class="location-input">
+                <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
+                <button class="banner-btn">
+                    <i class="fas fa-map-marker-alt"></i>
+                </button>
+                <input type="submit" value="Search">
+
+            </form>
         </div>
     </div>
 </div>
