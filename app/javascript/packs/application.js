@@ -29,9 +29,10 @@ import { collapseOnClick } from "../channels/dashboard";
 import { initCart } from "../plugins/cart";
 
 // Internal imports, e.g:
-import { collapseOnClick } from "../channels/dashboard";
-import { initMapbox } from '../channels/init_mapbox';
-// import { GetUserCoordinates } from "../channels/user_coords";
+import { collapseOnClick } from "../plugins/dashboard";
+import { initMapbox } from '../plugins/init_mapbox';
+import { GetUserCoordinates } from "../plugins/user_coords";
+
 
 const slide = () => {
   $('.items').slick({
@@ -90,7 +91,7 @@ document.addEventListener('turbolinks:load', () => {
 
   initCart();
   initMapbox();
-  // GetUserCoordinates();
+  GetUserCoordinates();
 });
 
 

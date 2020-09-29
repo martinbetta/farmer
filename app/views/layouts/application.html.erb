@@ -12,7 +12,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     <div class="nav1">
       <div class="container">
         <p class='logo'><%= link_to "Organigo", root_path %></p>
