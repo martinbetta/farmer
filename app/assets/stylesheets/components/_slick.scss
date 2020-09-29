@@ -1,12 +1,11 @@
 .slick-container {
+    padding: 90px 0px;
     height: 300px;
 }
-
 
 .slick-container p {
     color: $red;
 }
-
 
 .slick-prev:before {
     content: "<";
@@ -24,17 +23,15 @@
 
 .category-card {
     margin: 0 auto;
-    height: 70px !important;
-    width: 70px !important;
+    height: 90px !important;
+    width: 90px !important;
     background-size: cover;
     background-position: center;
 }
+
 .icon {
     text-decoration: none;
 }
 .icon:hover {
     text-decoration: none;
-}
-.container-card {
-    margin: 100px 0px;
 }
