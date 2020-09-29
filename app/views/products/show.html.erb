@@ -111,23 +111,22 @@
     </div>
 
     <div class="tab-pane" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-        <%= render 'reviews/form'  %>
-        </div>
+      <%= render 'reviews/form'  %>  
       <br>
 
       <h4>All the reviews</h4>
       <div class="container">
         <div class="row">
           <% @product.reviews.each do |review| %>
-              <div class="col-12 col-lg-6">
-                <div class="header-rate-box d-flex align-items-center pt-4">
-                  <p class="m-0 p-0 font-weight-bold"><%= review.user.first_name %> <%= review.user.last_name %> </p>
-                  <p class="ml-4"> <%= render "products/rating", avg_score: review.rating %></p>
-                </div>
-                <div class="review-description-box">
-                  <p> Review: <%= review.content %></p>
-                </div>
+            <div class="col-12 col-lg-6">
+              <div class="header-rate-box d-flex align-items-center pt-4">
+                <p class="m-0 p-0 font-weight-bold"><%= review.user.first_name %> <%= review.user.last_name %> </p>
+                <p class="ml-4"> <%= render "products/rating", avg_score: review.rating %></p>
               </div>
+              <div class="review-description-box">
+                <p> Review: <%= review.content %></p>
+              </div>
+            </div>
           <% end %>
         </div>
       </div>
