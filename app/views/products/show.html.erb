@@ -24,24 +24,25 @@
     </div>
 
     <div class="info-container">
-      <h2 class="product-header"><%= @product.name %></h2>
+      <h1 class="product-header"><%= @product.name %></h1>
 
       <div class="address-review-container">
         <h6><%= @product.user.address %></h6>
-        <h6>(Reviews stars field)</h6>
+        <h6>Rating: <%= @product.avg_score %></h6>
       </div>
 
       <div class="description-container">
         <p><%= @product.description %></p>
       </div>
 
-      <div class="price-container">
-        <h6 class="price-container"><strong>Price &emsp;&emsp;</strong><%= @product.unit_price %>/ unit</h6>
+      <div class="price-container d-flex">
+        <h5 class="price-container">Price:&emsp;</h5>
+        <h5>€ <%= @product.unit_price %> x <%= @product.unit %></h5>
       </div>
 
       <div class="quantity-container">
-        <h6><strong>Qty</strong></h6>
-        <%= simple_form_for [@product, @order_item], remote: true do |f| %>
+        <h5><strong>Qty</strong></h5>
+        <%= simple_form_for [@product, @order_item], authenticity_token: true, remote: true do |f| %>
           <div class="def-number-input number-input">
             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
             <%= f.input :quantity, label: false %>
@@ -55,24 +56,33 @@
 
   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Producer</a>
+      <a class="nav-link active" id="vendor-tab" data-toggle="tab" href="#vendor" role="tab" aria-controls="vendor" aria-selected="true">Producer</a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Review</a>
+      <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Review</a>
     </li>
   </ul>
 
-  <div id="myTabContent">
-    <div class="tab-pane fade show active" style="margin-top: 20px" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane show active" style="margin-top: 20px" id="vendor" role="tabpanel" aria-labelledby="vendor-tab">
       <div class="producer-container d-flex">
         <div class="producer-img-container">
             <%=  image_tag(@vendor.image_url) %>
         </div>
         <div class="vendor-info" style="margin-left: 40px">
           <h2><%= @vendor.company_name %></h2>
-          <h6>(Reviews stars field)</h6>
+
+          <h6> <%= @vendor.user.avg_score %></h6>
           <h6><%= @vendor.description %></h6>
+
         </div>
+      </div>
+      <!------------------ GEO MAP -------------------->
+      <div id="map"
+        style="width: 100%; height: 400px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
 
       <div class="more-products text-center">
@@ -81,6 +91,7 @@
 
       <div class="col-12 p-0">
         <div class="grid-show">
+          <!----------------- Vendor info ----------------->
           <% @vendor.user.products.each do |product| %>
             <%= link_to product_path(product) do %>
               <div class="product-card">
@@ -96,11 +107,18 @@
         </div>
       </div>
     </div>
+    <div class="tab-pane" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+        <%= render 'reviews/form'  %>
+      <br>
 
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h4>All the reviews</h4>
+
+      <% @product.reviews.each do |review| %>
+        <p>User: <%= review.user.first_name %> <%= review.user.last_name %></p>
+        <p> Review: <%= review.content %></p>
+        <p>Rating <%= review.rating %>/5 Stars</p><hr>
+
+      <% end %>
     </div>
-
   </div>
-
-
 </div> <!---- closing container ----->
