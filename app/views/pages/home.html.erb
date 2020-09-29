@@ -6,7 +6,7 @@
 
             <div class='see-all-products-btn'><%= link_to "See all products", products_path, class: "see-all-products" %></div>
             <form action="/products"  method="GET" class="banner-search">
-                <input type="text" name="location" class="loc-input-banner location-input" placeholder="Search by location">
+                <input type="text" name="location" class="loc-input-banner location-input" placeholder="Search by location" autocomplete="off">
                 <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
                 <button class="search-btn-banner" type="submit">
                     <i class="fas fa-search"></i>
