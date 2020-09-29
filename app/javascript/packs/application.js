@@ -25,10 +25,8 @@ require("channels")
 // External imports
 import "bootstrap";
 import "slick-carousel";
-import { collapseOnClick } from "../channels/dashboard";
-import { initCart } from "../plugins/cart";
 
-// Internal imports, e.g:
+import { initCart } from "../plugins/cart";
 import { collapseOnClick } from "../plugins/dashboard";
 import { initMapbox } from '../plugins/init_mapbox';
 import { GetUserCoordinates } from "../plugins/user_coords";
