@@ -42,37 +42,46 @@
                   <i class="fas fa-shopping-cart"></i>
                 </button>
 
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="width: 450px;">
                     <% @current_order.order_items.each do |item| %>
                       <div class="dropdown-item" data-id="<%= item.id %>">
-                        <span>
-                          <button class="btn btn-info quantity-sub">
-                            <i class="fas fa-minus"></i>
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div class="d-flex" style="flex: 4;">
+                            <button class="btn btn-info quantity-sub">
+                              <i class="fas fa-minus"></i>
+                            </button>
+
+                            <div class="quantity-for-item d-flex align-items-center justify-content-center" style="width: 60px;">
+                              <%= item.quantity %>
+                              <%= item.product.unit %>
+                            </div>
+
+                            <button class="btn btn-info quantity-add">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+
+                          <div style="flex: 2;">
+                            <%= item.product.name %>
+                          </div>
+
+
+                          <div class="ml-3" style="flex: 2;">
+                            <%= item.total_price %>
+                          </div>
+
+                          <button class="btn btn-danger delete-item">
+                            <i class="fas fa-trash"></i>
                           </button>
-
-                          <span class="quantity-for-item"> <%= item.quantity %> </span>
-
-                          <button class="btn btn-info quantity-add">
-                            <i class="fas fa-plus"></i>
-                          </button>
-
-                          <%= item.product.unit %>
-                          <%= item.product.name %>
-                        </span>
-
-                        <span>
-                          <%= item.total_price %>
-                        </span>
-
-                        <button class="btn btn-danger delete-item">
-                          <i class="fas fa-trash"></i>
-                        </button>
+                        </div>
                       </div>
                     <% end %>
-                    <div class='total-price'>
-                      <span>Total price:</span>
-                      <span id="subtotal"><%= @subtotal %></span>
-                    </div>
+                    <div class="dropdown-divider"></div>
+                      <div class="total-price d-flex align-items-center justify-content-between">
+                        <div class="font-weight-bold" style="padding: 0.25rem 1.5rem;">Total price:</div>
+                        <div class="font-weight-bold" id="subtotal" style="padding: 0.25rem 1.5rem;"><%= @subtotal %></div>
+                      </div>
+                    <div type="button" class="btn-checkout">Checkout</div>
                   </div>
               </div>
             <% end %>
