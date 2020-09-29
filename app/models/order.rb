@@ -1,6 +1,9 @@
 class Order < ApplicationRecord
+
   belongs_to :user
   has_many :order_items
+  monetize :total_price_cents
+
 
   def self.setup_order(current_user)
     if current_user.orders.find_by(status: "new")
