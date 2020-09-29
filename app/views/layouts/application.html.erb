@@ -79,7 +79,11 @@
                         <div class="font-weight-bold" style="padding: 0.25rem 1.5rem;">Total price:</div>
                         <div class="font-weight-bold" id="subtotal" style="padding: 0.25rem 1.5rem;"><%= @subtotal %></div>
                       </div>
-                    <div type="button" class="btn-checkout">Checkout</div>
+
+                      <%= simple_form_for @current_order do |f| %>
+                        <%= f.submit "Checkout", class: 'btn btn-checkout' %>
+                      <% end %>
+                      <!-- <div type="button" class="btn-checkout">Checkout</div> -->
                   </div>
               </div>
             <% end %>
