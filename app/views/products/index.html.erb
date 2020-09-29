@@ -65,19 +65,28 @@
         </a>
         <% end %>
       </div>
+
       <div class= "index_location">
-      <form action="/products"  method="GET">
-        <input type="text" name="location">
-        <%# <input type="text" id="latlon" /> %>
-        <% if params[:search]  %>
-          <input type="hidden" name="search" value="<%= params[:search] %>">
-        <% end %>
-        <% if params[:vendor] %>
-          <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
-        <% end %>
-        <input type="submit" value="Search">
-      </form>
+        <form action="/products"  method="GET">
+
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+          
+          <input type="text" name="location" class="location-input">
+            <% if params[:search]  %>
+              <input type="hidden" name="search" value="<%= params[:search] %>">
+            <% end %>
+            <% if params[:vendor] %>
+              <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
+            <% end %>
+            <button class="current-location btn btn-info">
+              <i class="fas fa-map-marker-alt"></i>
+            </button>
+          <input type="submit" value="Search">
+        </form>
       </div>
+
     </div> <!---- closing the col-3 ---->
   </div> <!---- closing the row div ---->
 </div> <!---- closing the container div ---->

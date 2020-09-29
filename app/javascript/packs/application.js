@@ -27,8 +27,11 @@ import "bootstrap";
 import "slick-carousel";
 import { collapseOnClick } from "../channels/dashboard";
 import { initCart } from "../plugins/cart";
-import { initMapbox } from '../channels/init_mapbox';
-// import { GetUserCoordinates } from "../channels/user_coords";
+
+// Internal imports, e.g:
+import { collapseOnClick } from "../plugins/dashboard";
+import { initMapbox } from '../plugins/init_mapbox';
+import { GetUserCoordinates } from "../plugins/user_coords";
 
 const slide = () => {
   $('.items').slick({
@@ -87,7 +90,7 @@ document.addEventListener('turbolinks:load', () => {
 
   initCart();
   initMapbox();
-  // GetUserCoordinates();
+  GetUserCoordinates();
 });
 
 
