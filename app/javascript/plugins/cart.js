@@ -10,7 +10,7 @@ const updateOrderItem = (quantityField, id, quantity) => {
   })
     .then(response => response.json())
     .then((data) => {
-      quantityField.innerText = data.order_item.quantity
+      quantityField.innerText = `${data.order_item.quantity} ${data.unit}`
       quantityField.parentNode.nextElementSibling.innerText = data.item_total_price
       document.querySelector('#subtotal').innerText = data.subtotal
 
@@ -18,7 +18,7 @@ const updateOrderItem = (quantityField, id, quantity) => {
 }
 
 const deleteOrderItem = (item) => {
-  const parent = item.parentNode
+  const parent = item.parentNode.parentNode
   const id = parent.dataset.id
 
   fetch(`/order_items/${id}`, {
@@ -35,7 +35,7 @@ const deleteOrderItem = (item) => {
 const addQuantityItem = () => {
   document.querySelectorAll('.quantity-add')
     .forEach(item => item.addEventListener('click', event => {
-      const dropdownItem = item.parentNode.parentNode
+      const dropdownItem = item.parentNode.parentNode.parentNode
       const id = dropdownItem.dataset.id
       const currentQuantity = parseInt(item.previousElementSibling.innerText)
 
@@ -46,7 +46,7 @@ const addQuantityItem = () => {
 const removeQuantityItem = () => {
   document.querySelectorAll('.quantity-sub')
     .forEach(item => item.addEventListener('click', event => {
-      const dropdownItem = item.parentNode.parentNode
+      const dropdownItem = item.parentNode.parentNode.parentNode
       const id = dropdownItem.dataset.id
       const currentQuantity = parseInt(item.nextElementSibling.innerText)
 
