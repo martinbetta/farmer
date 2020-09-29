@@ -45,18 +45,18 @@
         <h4>Filter by location</h4>
         <form action="/products"  method="GET">
           <input type="text" name="location" class="location-input" placeholder="Add new address..">
-            <% if params[:search]  %>
-              <input type="hidden" name="search" value="<%= params[:search] %>">
-            <% end %>
-            <% if params[:vendor] %>
-              <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
-            <% end %>
+          <% if params[:search]  %>
+            <input type="hidden" name="search" value="<%= params[:search] %>">
+          <% end %>
+          <% if params[:vendor] %>
+            <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
+          <% end %>
           <button class="search-btn" type="submit">
             <i class="fas fa-search"></i>
           </button>
-        <button class="current-location btn">
-          <i class="fas fa-map-marker-alt">&emsp;Share my location</i>
-        </button>
+          <button class="current-location btn">
+            <i class="fas fa-map-marker-alt">&emsp;Share my location</i>
+          </button>
         </form>
       </div>
 
