@@ -1,8 +1,7 @@
-<div class="container">
-  <div class="row py-4">
-    <div class="col">
-      <h1>Checkout summary</h1>
-      <button id="pay" class="btn btn-primary">Pay</button>
+<div class="container sign-in-up-box">
+  <div class="wrapper-1-sign-in-up">
+      <h2>Checkout summary</h2>
+      <button id="pay" class="btn btn-danger" style="border-radius: 5px;">Pay</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
@@ -13,6 +12,6 @@
           });
         });
       </script>
-    </div>
   </div>
+    <div class="wrapper-2-sign-in-up"></div>
 </div>
