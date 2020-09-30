@@ -115,8 +115,10 @@
 
     <div type="button" id= "review-collapsible" class="collapsible">
       <div class="order-headers">
-        <div class="order-info-headers-box">
-          <p> <i class="fas fa-plus"> </i>Review this product</p>
+
+        <div class="order-info-headers-box collapsible-button">
+          <h6> <i class="fas fa-plus mb-0">&emsp;</i>Review this product</h6>
+
         </div>
       </div>
     </div>
@@ -125,7 +127,7 @@
     </div>
       <br>
       <h4>All the reviews</h4>
-      <div class="container">
+      <div>
         <div class="row">
           <% @product.reviews.each do |review| %>
             <div class="col-12 col-lg-6">
@@ -134,7 +136,8 @@
                 <p class="ml-4"> <%= render "products/rating", avg_score: review.rating %></p>
               </div>
               <div class="review-description-box">
-                <p> Review: <%= review.content %></p>
+                <p class="mb-0"> Review: <%= review.content %></p>
+                <p class="date-review"> <%=review.created_at.strftime("%d %b %Y") %></p>
               </div>
             </div>
           <% end %>
