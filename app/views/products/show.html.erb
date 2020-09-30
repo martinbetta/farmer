@@ -1,16 +1,16 @@
 <div class="container">
 
   <div class="product-container">
-
     <div class="img-container" style="background-image: url(<%= @product.image_url %>)">
     </div>
-
+    
     <div class="info-container">
-
       <div class="first-row">
         <div class="container-name-stars">
           <h1 class="product-header"><strong><%= @product.name %></strong></h1>
-          <%= render "products/rating", avg_score: @product.avg_score %>
+          <div class="show-rate-box">
+            <%= render "products/rating", avg_score: @product.avg_score  %>
+          </div>
         </div>
         <h6><%= @product.user.address %></h6>
       </div>
@@ -18,7 +18,6 @@
       <div class="description-container">
         <p><%= @product.description %></p>
       </div>
-
 
       <div class="third-row">
         <div class="price-container d-flex">
@@ -39,7 +38,6 @@
           <% end %>
         </div>
       </div>
-
     </div>
 
   </div>
@@ -49,15 +47,15 @@
       <a class="nav-link active" id="vendor-tab" data-toggle="tab" href="#vendor" role="tab" aria-controls="vendor" aria-selected="true">Producer</a>
     </li>
     <li class="nav-item" role="presentation">
-      <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Review</a>
+      <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
     </li>
   </ul>
 
 
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane show active" style="margin-top: 20px" id="vendor" role="tabpanel" aria-labelledby="vendor-tab">
-      <div class="producer-container d-flex">
 
+      <div class="producer-container d-flex">
         <div class="producer-img-container">
             <%=  image_tag(@vendor.image_url) %>
         </div>
@@ -69,8 +67,8 @@
           </div>
           <h6><%= @vendor.description %></h6>
         </div>
-
       </div>
+
       <!------------------ GEO MAP -------------------->
       <div id="map"
         style="width: 100%; height: 350px;"
@@ -84,28 +82,8 @@
 
       <div class="col-12 p-0">
         <div class="grid-show">
-          <!----------------- Vendor info ----------------->
-          <% @vendor.user.products.each do |product| %>
-            <%= link_to product_path(product) do %>
-              <div class="product-card">
-              <div class="product-image" style="background-image: url(<%= product.image_url %>)">
-              </div>
-              <div class="product-info">
-                <div class="name-rate-box">
-                  <div class="name-box">
-                    <h4 class="bold-title"><%= product.name %></h4>
-                  </div>
-                  <div class="rate-box">
-                    <%= render "products/rating", avg_score: product.avg_score %>
-                  </div>
-                </div>
-                <div class="price-unit-cat-box">
-                  <h6 class="price-product-index">€ <%= product.unit_price %> / <%= product.unit %> - <%= product.category %></h6>
-                </div>
-              </div>
-            </div>
-            <% end %>
-          <% end %>
+          <%# ------product card render-------- %>
+          <%= render "products/card" %>
         </div>
       </div>
     </div>
