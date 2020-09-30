@@ -18,7 +18,7 @@
     <% end %>
   </div>
    <div>
-    <p>Showing <%= @products.count%> out of <%= @products.all.count%> results</p>
+    <p>Showing <strong><%= @products.count%></strong> out of <strong><%= @products.all.count%></strong> results</p>
     </div>
   <div class="row">
     <div class="col-9">
@@ -29,13 +29,17 @@
               <div class="product-image" style="background-image: url(<%= product.image_url %>)">
               </div>
               <div class="product-info">
-                <h4 class="bold-title"> <%= product.name %> </h4>
-
-                <%= render "products/rating", avg_score: product.avg_score %>
-
-                <h4 class="price-product-index"> <i class="fas fa-euro-sign"></i> <%= product.unit_price %> / <%= product.unit %> </h4>
-                <p class="category-name-small"><%= product.category %></p>
-
+                <div class="name-rate-box">
+                  <div class="name-box">
+                    <h4 class="bold-title"> <%= product.name %> </h4>
+                  </div>
+                  <div class="rate-box">
+                    <%= render "products/rating", avg_score: product.avg_score %>
+                  </div>
+                </div>
+                <div class="price-unit-cat-box">
+                  <h6 class="price-product-index">€ <%= product.unit_price %> / <%= product.unit %> - <%= product.category %></h6>
+                </div>
               </div>
             </div>
           <% end %>
@@ -45,7 +49,7 @@
     <div class="col-3">
 
       <div class= "index_location">
-        <h4>Filter by location</h4>
+        <h4><strong>Filter by location</strong></h4>
         <form action="/products"  method="GET">
         <div class="search-box">
           <input type="text" name="location" class="location-input" placeholder="Add new address..">
@@ -60,13 +64,13 @@
             <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
           <% end %>
           <button class="current-location btn">
-            <i class="fas fa-map-marker-alt">&emsp;Share my location</i>
+            <h6><i class="fas fa-map-marker-alt"></i> Share my location</h6>
           </button>
         </form>
       </div>
 
       <div>
-        <h4>Filter by Category</h4>
+        <h4><strong>Filter by category</strong></h4>
       </div>
       <div class="grid-cat">
         <% Product::CATEGORIES.each do |category|  %>
@@ -83,7 +87,7 @@
          See all products
       </a>
       <div class= "index_producer">
-      <h4>Filter by Producer</h4>
+      <h4><strong>Filter by producer</strong></h4>
         <% @producers.each do |producer| %>
         <a class='vendor-name-index' href="<%= generate_index_route(params.merge(vendor: producer.vendor_info.company_name)) %>">
           <p> <%= producer.vendor_info.company_name %></p>

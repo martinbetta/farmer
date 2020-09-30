@@ -21,11 +21,6 @@
     text-decoration: none;
   }
 }
-.category-name-small{
-  color:grey;
-  font-size: 10px;
-
-}
 
 .product-image {
   height: 120px;
@@ -152,4 +147,27 @@ margin-top: 50px;
 
 #btn-current {
   width: 30px;
+}
+
+//--------------------cards 
+.product-info {
+  padding: 4px
+}
+.name-rate-box {
+  display: flex;
+  position: relative
+}
+
+.rate-box {
+  position: absolute;
+  right: 0px
+}
+
+.price-unit-cat-box {
+display: flex;
+}
+
+
+.category-name-small{
+  color: grey
 }
