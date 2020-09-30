@@ -2,7 +2,6 @@
 
   <div class="product-container">
 
-
     <div class="img-container" style="background-image: url(<%= @product.image_url %>)">
     </div>
 
@@ -43,7 +42,6 @@
 
   </div>
 
-
   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="vendor-tab" data-toggle="tab" href="#vendor" role="tab" aria-controls="vendor" aria-selected="true">Producer</a>
@@ -57,7 +55,6 @@
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane show active" style="margin-top: 20px" id="vendor" role="tabpanel" aria-labelledby="vendor-tab">
       <div class="producer-container d-flex">
-
 
         <div class="producer-img-container">
             <%=  image_tag(@vendor.image_url) %>
@@ -116,9 +113,8 @@
     <div type="button" id= "review-collapsible" class="collapsible">
       <div class="order-headers">
 
-        <div class="order-info-headers-box collapsible-button">
-          <h6> <i class="fas fa-plus mb-0">&emsp;</i>Review this product</h6>
-
+        <div class="order-info-headers-box">
+          <p> <i class="fas fa-plus"> </i> Write your opinion</p>
         </div>
       </div>
     </div>
