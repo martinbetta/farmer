@@ -29,6 +29,7 @@ const deleteOrderItem = (item) => {
     .then((data) => {
       parent.remove()
       document.querySelector('#subtotal').innerText = data.subtotal
+      document.querySelector('#cart-notification').innerText = data.cart_length
     });
 }
 
