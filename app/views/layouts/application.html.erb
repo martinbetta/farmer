@@ -81,7 +81,9 @@
                       </div>
 
                       <%= simple_form_for @current_order do |f| %>
-                        <%= f.submit "Checkout", class: 'btn btn-checkout' %>
+                        <div style="padding: 0.25rem 1.5rem;">
+                          <%= f.submit "Checkout", class: 'btn btn-checkout' %>
+                        </div>
                       <% end %>
                       <!-- <div type="button" class="btn-checkout">Checkout</div> -->
                   </div>
