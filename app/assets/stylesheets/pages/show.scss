@@ -216,3 +216,23 @@ border-radius:3px
 display: flex;
 }
 
+#review-collapsible{
+  background-color: #F9FCFB;
+}
+#background-review{
+background-color: #F9FCFB;
+}
+
+.content-field{
+  flex-grow: 3;
+}
+
+.new-review-wrapper {
+  gap: 15px;
+}
+.color-btn-review {
+ background-color: #da4302;
+ color:white;
+ border-radius: 10px;
+}
+

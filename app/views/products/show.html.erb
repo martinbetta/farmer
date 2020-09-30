@@ -43,6 +43,7 @@
     
   </div>
 
+
   <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="vendor-tab" data-toggle="tab" href="#vendor" role="tab" aria-controls="vendor" aria-selected="true">Producer</a>
@@ -109,11 +110,20 @@
         </div>
       </div>
     </div>
-
+    <div></div>
     <div class="tab-pane" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-      <%= render 'reviews/form'  %>  
-      <br>
 
+    <div type="button" id= "review-collapsible" class="collapsible">
+      <div class="order-headers">
+        <div class="order-info-headers-box">
+          <p> <i class="fas fa-plus"> </i>Write your opinion</p>
+        </div>
+      </div>
+    </div>
+    <div  id="background-review" class="content">
+      <%= render 'reviews/form'  %>
+    </div>
+      <br>
       <h4>All the reviews</h4>
       <div class="container">
         <div class="row">
