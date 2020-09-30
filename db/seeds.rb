@@ -37,7 +37,7 @@ user = User.create(
 vendor = VendorInfo.create(
   description: "Peter's Organic Farm is located in the Province of Girona. Farmer Peter started the business here in 1987, and we’ve been growing organic fruits ever since. If you’re ever nearby, you’re more than welcome to come for a walk (the view, across fields and wood-shrouded hills, is a bit of a show-stopper). Or join us for a warm apple pie and a freshly squeezed juice at the Peter's Bistrot ;-)",
   company_name: "Peter's Organic Farm",
-  image_url: "https://images.unsplash.com/photo-1535090467336-9501f96eef89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+  image_url: "https://images.unsplash.com/photo-1599594202097-b82bcbd6be28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80",
   user: user
   )
 product = Product.new(
@@ -97,7 +97,7 @@ vendor = VendorInfo.create(
   Secondly, we enrich our soil with compost and other natural soil additives and we have developed a rich organic soil that contains billions of micro-organisms; this rich soil increases the quantity, the quality and the variety of nutrients in our produce and enables us to offer you food that is really nutritious.
   Thirdly, our rich organic soil also enhances the taste and the flavours of our produce and enables us to give you a delightful culinary experience as well as good nutrition.",
   company_name: "La Granja de Lola",
-  image_url: "https://www.ayojon.mx/galeria/2018/04/43716_m.jpg",
+  image_url: "https://cdn.pixabay.com/photo/2016/11/14/02/58/agriculture-1822450_960_720.jpg",
   user: user
   )
 product = Product.new(
@@ -154,7 +154,7 @@ user = User.create(
 vendor = VendorInfo.create(
   description: "At Cava Galore, we understand that the long production process of our cavas starts with the land and the vines. For this reason, our environmental awareness is understood as the result of the close ties between the process of making our products and our natural environment. The outcome of this effort is the fact that each day we are increasingly more respectful of the environment around us, thanks to our conviction and responsibility (this word is important; we believe we must take responsibility for our processes, as the environment belongs to us all, and it is the duty of each person to act in keeping with his/her possibilities). Proof of this responsibility resides in the fact that in 1999 we became the first cava company to earn the ISO14001 Certificate for Environmental Management. This environmental certificate was the result of many years of implementing improvements in each of the production processes, the underlying principle of which was prevention rather than treatment. Minimisation at the point of origin is key to all productive and environmental efficiency. It is a responsible stance towards our environment.",
   company_name: "Cava Galore",
-  image_url: "https://i1.wp.com/www.winepleasures.com/wp-content/uploads/2018/12/Cava-tasting-1.jpg?ssl=1",
+  image_url: "https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
   user: user
   )
 product = Product.new(
@@ -203,7 +203,7 @@ vendor = VendorInfo.create(
   Using organic flours means every batch is different, requiring the baker’s keen and observant eye like an orchestra conductor to harmoniously pull every element together.
   With no added soya or gluten, it is entirely in the hands of the baker to effect the miracle of transforming soft powder to dense loaves. Every week we receive a different batch of flour, and every week we need to think about how that particular flour is going to work. Being the product of the soil and the weather, each batch will react slightly differently to water, yeast and temperature.",
   company_name: "Bettaglio Bread",
-  image_url: "https://www.theladders.com/wp-content/uploads/baker_190422-800x450.jpg",
+  image_url: "https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
   user: user
   )
 product = Product.new(
@@ -250,7 +250,7 @@ user = User.create(
 vendor = VendorInfo.create(
   description: "We run a small scale farme outside, but close to Barcelona. Our specialisation is egg production with the best birds in Spain. Our egg yolks are more yellow than the sun.",
   company_name: "Oeufs Sauvages",
-  image_url: "https://firehouse.studio/PaulOM/wp-content/uploads/2017/09/Organic_Egg_Farmer.jpg",
+  image_url: "https://images.pexels.com/photos/169523/pexels-photo-169523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   user: user
   )
 product = Product.new(
@@ -297,7 +297,7 @@ user = User.create(
 vendor = VendorInfo.create(
   description: "Marin's Orchard is located in the Province of Barcelona. Marin started the business here in 1987, and we’ve been growing organic fruits ever since. If you’re ever nearby, you’re more than welcome to come for a walk (the view, across fields and wood-shrouded hills, is a bit of a show-stopper). Or join us for a warm apple pie and a freshly squeezed juice at the Peter's Bistrot ;-)",
   company_name: "Marin's Orchard",
-  image_url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/06/22/11/strawberry-farm-worker.jpg",
+  image_url: "https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   user: user
   )
 product = Product.new(
