@@ -5,3 +5,25 @@ th {
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
+.payment-img {
+  margin-top:50px;
+  background-image: url("cards.png");
+  height: 150px;
+  width: 150px;
+  background-position: top center;
+  background-size: cover;
+  margin-right: 30px;
+  align-content: center;
+  margin: auto
+}
+
+.pay-img-header {
+  text-align: center;
+  margin-top: 60px
+}
+
+.pay-info {
+  text-align: center;
+  margin-top: 40px
+}
