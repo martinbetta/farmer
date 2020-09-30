@@ -1,7 +1,7 @@
 
 .info-container {
   width: 50%;
-  padding: 0px 15px;
+  padding: 0px 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,6 +12,9 @@
   background-position: center;
   background-size: cover;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.55);
 }
 
 .more-products h1 {
@@ -28,6 +31,7 @@
 .product-container {
   display: flex;
   padding: 50px 0px;
+  
 }
 .container-name-stars {
   display: flex;
@@ -39,6 +43,7 @@
 .description-container {
   font-size: 25px;
   padding: 20px 0px;
+  border-radius: 5px;
 }
 //------------------------------------------------------
 .nav-tabs .nav-link.active {
@@ -62,6 +67,7 @@
 //---------------------------------------------------
 .color-vendor {
   color: #fd5e53;
+
 }
 
 .price-container h5 {
@@ -94,12 +100,15 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  
 }
 
 .producer-img-container img {
   border-radius: 10px;
   height: 300px;
-
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 .container-producer-name-rating{
   display: flex;
