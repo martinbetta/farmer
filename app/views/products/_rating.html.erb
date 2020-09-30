@@ -1,5 +1,5 @@
 <div style="font-size: 12px;">
   <% 5.times do |index| %>
-    <i class="fas fa-star <%= avg_score > index ? 'text-info' : 'text-muted' %>"></i>
+    <i class="<%= avg_score > index ? 'fas' : 'far' %> fa-star <%= avg_score > index ? 'text-info' : 'text-muted' %>"></i>
   <% end %>
 </div>
