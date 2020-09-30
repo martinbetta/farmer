@@ -1,6 +1,6 @@
-th {
-  border-bottom: 1px solid;
-}
+// th {
+//   border-bottom: 1px solid;
+// }
 
 tr:nth-child(even) {
   background-color: white;
@@ -26,4 +26,8 @@ tr:nth-child(even) {
 .pay-info {
   text-align: center;
   margin-top: 40px
+}
+
+#pay {
+  width: 100%;
 }
