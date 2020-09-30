@@ -40,7 +40,7 @@
                   <i class="fas fa-shopping-cart"></i>
                 </button>
 
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="width: 450px;">
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="width: 450px; background-color: #FAFCFB;">
                     <% @current_order.order_items.each do |item| %>
                       <div class="dropdown-item" data-id="<%= item.id %>">
                         <div class="d-flex align-items-center justify-content-between">
