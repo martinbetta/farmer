@@ -12,7 +12,7 @@
           </tr>
           <% @order.order_items.each do |item| %>
           <tr>
-            <td><%= item.product.name %></td>
+            <td style="overflow-x: hidden; text-overflow: ellipsis;"><%= item.product.name %></td>
             <td><%= item.quantity %></td>
             <td><%= item.product.unit %></td>
             <td>€<%= item.product.unit_price %></td>
@@ -28,7 +28,7 @@
         </table>
       </div>
 
-      <button id="pay" class="btn btn-danger" style="border-radius: 5px; margin-top: 15px;">Pay</button>
+      <button id="pay" class="btn btn-danger" style="border-radius: 5px; margin-top: 15px;">Proceed to payment</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
         const paymentButton = document.getElementById('pay');
