@@ -37,7 +37,7 @@
   line-height: 50px ;
 }
 .description-container {
-  font-size: 20px;
+  font-size: 25px;
   padding: 20px 0px;
 }
 //------------------------------------------------------
@@ -124,6 +124,10 @@
   width: 100%;
   margin-top: 50px;
   border-radius: 5px;
+  font-size: 20px;
+}
+.add-to-cart:hover {
+  color: white;
 }
 .def-number-input{
   display: flex;
