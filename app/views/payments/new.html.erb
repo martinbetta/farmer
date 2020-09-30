@@ -2,23 +2,25 @@
   <div class="wrapper-1-sign-in-up">
       <h2>Checkout summary</h2>
       <div class="order-overview" >
-        <% @order.order_items.each do |item| %>
-          <div class="overview-all d-flex justify-content-between">
-            <div class="overview-product-unit"><%= item.product.name %></div>
-            <div class=overview-item-quantity><%= item.quantity %></div>
-            <div class=overview-product-unit><%= item.product.unit %></div>
-            <div class=overview-product-price><%= item.product.unit_price %></div>
-            <div class=overview-total-price><%= item.total_price.to_f%></div>
-           </div>
-        <% end %>
-
-        <div class="overview-all d-flex">
+        <table>
+          <tr>
+            <th style="width:35%">Product</th>
+            <th style="width:15%">Quantity</th>
+            <th style="width:20%">Unit</th>
+            <th style="width:20%">Price</th>
+            <th style="width:10%">Subtotal</th>
+          </tr>
           <% @order.order_items.each do |item| %>
-          <p><%= item.product.name %>&emsp;&emsp;<%= item.quantity %>&emsp;<%= item.product.unit %>&emsp;<%= item.product.unit_price %>&emsp;<%= item.total_price.to_f%></p>
+          <tr>
+            <td><%= item.product.name %></td>
+            <td><%= item.quantity %></td>
+            <td><%= item.product.unit %></td>
+            <td><%= item.product.unit_price %></td>
+            <td><%= item.total_price.to_f %></td>
           <% end %>
-        </div>
-
+        </table>
       </div>
+
       <button id="pay" class="btn btn-danger" style="border-radius: 5px;">Pay</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
