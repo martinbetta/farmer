@@ -1,14 +1,14 @@
 <div class="banner">
     <div class="container">
         <div class="banner-text">
-            <h1>Eat fresh, local, and responsible.</h1>
-            <p>Join us in making cities more sustainable.</p>
+            <h1>Eat fresh, local, and responsibly.</h1>
+            <p>Join us and buy directly from producers near you.</p>
 
             <%= link_to products_path, class: 'link-block' do %>
                 <div class='see-all-products-btn'>See all products</div>
             <% end %>
             <form action="/products"  method="GET" class="banner-search">
-                <input type="text" name="location" class="loc-input-banner location-input" placeholder="Search by location" autocomplete="off">
+                <input type="text" name="location" class="loc-input-banner location-input" placeholder="Explore local products" autocomplete="off">
                 <input type="hidden" name="vendor" value="<%= params[:vendor] %>">
                 <button class="search-btn-banner" type="submit">
                     <i class="fas fa-search"></i>
@@ -39,11 +39,11 @@
 <div class="secondary-banner">
     <div class="secondary-banner-img"></div>
     <div class="secondary-banner-text">
-        <h2 class="secondary-banner-text-title">Fresh Locally Grown</h2>
-        <p>At Organigo Farm Shop we're always looking for fantastic local produce - 
-        if it's high in quality and low in food miles, we want it on our shelves. 
-        We're particularly proud of our selection of delicious, 
-        locally-grown veg, available at the Farm Shop and on our website.</p>
+        <h2 class="secondary-banner-text-title">Fresh & Local</h2>
+        <p>At Organigo we're always looking for fantastic local produce -
+        if it's high in quality and low in food miles, we want it on our shelves.
+        We're particularly proud of our selection of delicious,
+        locally-grown veg, available on our website.</p>
         <%= link_to "Start shopping", products_path, class: "start-shopping-btn" %>
     </div>
 </div>
@@ -53,15 +53,15 @@
         <div class="label"><i class="fas fa-seedling"></i></div>
         <h2>100% Organic</h2>
         <p> Our products are farm fresh and 100% Organic </p>
-    </div>    
+    </div>
     <div class="card-label">
         <div class="label"><i class="fas fa-shield-alt"></i></div>
         <h2>Secure Online Payment</h2>
         <p>Order payments on our site are encrypted and handled directly by Mastercard or Visa</p>
-    </div>  
+    </div>
     <div class="card-label">
         <div class="label"><i class="fas fa-headset"></i></div>
         <h2>Customer Support</h2>
-        <p>Our Team is Ready to Help you with any Problems or Questions</p>
-    </div>  
+        <p>Our Team is Ready to assist you and answer your questions</p>
+    </div>
 </div>
