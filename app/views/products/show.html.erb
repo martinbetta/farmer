@@ -9,7 +9,7 @@
 
       <div class="first-row">
         <div class="container-name-stars">
-          <h1 class="product-header"><%= @product.name %></h1>
+          <h1 class="product-header"><strong><%= @product.name %></strong></h1>
           <%= render "products/rating", avg_score: @product.avg_score %>
         </div>
         <h6><%= @product.user.address %></h6>
@@ -29,9 +29,11 @@
           <h5><strong>Qty</strong></h5>
           <%= simple_form_for [@product, @order_item], authenticity_token: true, remote: true do |f| %>
             <div class="def-number-input number-input">
-              <button onclick="if (this.parentNode.querySelector('input[type=number]').value > 1 ) this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="minus"></button>
-              <%= f.input :quantity, label: false, input_html: { value: 1 } %>
-              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();  return false;" class="plus"></button>
+              <div class="btns-input">
+                <button onclick="if (this.parentNode.querySelector('input[type=number]').value > 1 ) this.parentNode.querySelector('input[type=number]').stepDown();  return false;" class="btn btn-lg minus"><i class="fas fa-minus-circle"></i></button>
+                  <div class="input-space"><%= f.input :quantity, label: false, input_html: { value: 1 }%></div>
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();  return false;" class="btn btn-lg plus"><i class="fas fa-plus-circle"></i></button>
+              </div>
             </div>
             <%= f.button :submit, 'Add to cart', class:"add-to-cart"%>
           <% end %>
@@ -42,7 +44,7 @@
 
   </div>
 
-  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="vendor-tab" data-toggle="tab" href="#vendor" role="tab" aria-controls="vendor" aria-selected="true">Producer</a>
     </li>
@@ -62,7 +64,7 @@
 
         <div class="vendor-info" style="margin-left: 40px">
           <div class="container-producer-name-rating">
-            <h2><%= @vendor.company_name %></h2>
+            <h2><strong><%= @vendor.company_name %></strong></h2>
             <%= render "products/rating", avg_score: @vendor.user.avg_score %>
           </div>
           <h6><%= @vendor.description %></h6>
@@ -91,7 +93,7 @@
               <div class="product-info">
                 <div class="name-rate-box">
                   <div class="name-box">
-                    <h4 class="bold-title"> <%= product.name %> </h4>
+                    <h4 class="bold-title"><%= product.name %></h4>
                   </div>
                   <div class="rate-box">
                     <%= render "products/rating", avg_score: product.avg_score %>
