@@ -7,18 +7,27 @@
   font-weight: normal;
   margin-bottom: 25px;
   margin-top: 25px;
+  width: 100%;
 }
 
 .sign-in-up-box{
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  border-style: solid;
+  border-color: $red;
+  border-radius: 12px;
 }
 
 .wrapper-1-sign-in-up {
   width: 50%;
   margin-right: 10px;
+  padding-right: 50px;
+  a {
+    color: #da4302;
+  }
 }
 
 .wrapper-2-sign-in-up {
@@ -26,6 +35,7 @@
   background-size: cover;
   background-position: center;
   width: 50%;
+  border-radius: 12px;
 }
 
 #vendor-registration{
