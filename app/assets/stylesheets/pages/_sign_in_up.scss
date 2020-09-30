@@ -14,11 +14,15 @@
   justify-content: space-between;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-top: 15px;
+  border-style: solid;
+  border-color: $red;
 }
 
 .wrapper-1-sign-in-up {
   width: 50%;
   margin-right: 10px;
+  padding-right: 50px;
 }
 
 .wrapper-2-sign-in-up {
@@ -26,6 +30,7 @@
   background-size: cover;
   background-position: center;
   width: 50%;
+  border-radius: 12px;
 }
 
 #vendor-registration{

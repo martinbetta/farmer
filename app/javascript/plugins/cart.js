@@ -11,7 +11,7 @@ const updateOrderItem = (quantityField, id, quantity) => {
     .then(response => response.json())
     .then((data) => {
       quantityField.innerText = `${data.order_item.quantity} ${data.unit}`
-      quantityField.parentNode.nextElementSibling.innerText = data.item_total_price
+      quantityField.parentNode.nextElementSibling.nextElementSibling.innerText = data.item_total_price
       document.querySelector('#subtotal').innerText = data.subtotal
 
     });
