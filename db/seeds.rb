@@ -5,6 +5,7 @@ OrderItem.destroy_all
 Product.destroy_all
 Order.destroy_all
 User.destroy_all
+Review.destroy_all
 
 require 'nokogiri'
 require 'open-uri'
@@ -299,6 +300,7 @@ positive_reviews = ["Nice product, awesome quality","Very fresh and cheap"," Inc
 I do my shopping every week"]
 
 100.times do
+
 review = Review.create(
   content: positive_reviews.sample,
   rating: (3..5).to_a.sample,
@@ -308,6 +310,7 @@ review = Review.create(
 end
 
 negative_reviews = ["Horrible product","I hate it, I won't buy again"," Bad service","I wouldn't recommend", "The service is terrible", "I disliked the experience"]
+
 
 30.times do
 review = Review.create(

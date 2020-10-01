@@ -1,10 +1,34 @@
 .show-rate-box .rate-stars-box {
     font-size: 18px;
-
 }
 
 .rate-stars-box {
     font-size: 12px;
 }
 
+
+}
+
+
+
+    min-width: 120px;
+}
+
+.container-name-stars {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-name-stars > div {
+    line-height: 40px ;
+  }
+.index-stars .fa-star {
+font-size: 12px;
+  }
+  .container-producer-name-rating{
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-producer-name-rating > div {
+    line-height: 40px;
+  }
 
