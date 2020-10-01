@@ -194,7 +194,7 @@ vendor = VendorInfo.create(
 
   p 'winessssssssssssssssssssssssssssssssssssssssssssssssss------------------------------------------------------------------'
   puts 'Creating single vendor '
-  
+
   user = User.create(
     email: "OrgannicGo@gmail.com",
     password: "password",
@@ -242,11 +242,11 @@ vendor = VendorInfo.create(
       p ' '
 
     end
-  
 
 
 
-   # herb and spice 
+
+   # herb and spice
 p 'creating herb and spicessssssssssssssssssssssssssssssssss------------------------------------------------'
 
 user = User.create(
@@ -295,4 +295,25 @@ html_doc.search('.product').first(30).each do |card|
   p ' '
   p ' '
 
+positive_reviews = ["Nice product, awesome quality","Very fresh and cheap"," Incredible","I wouldn't recommend", "Truly very healthy products", "Ok, but nothing fancy", "I Love Organigo, cheap and fresh", "Amazing products, I love it
+I do my shopping every week"]
+
+100.times do
+review = Review.create(
+  content: positive_reviews.sample,
+  rating: (3..5).to_a.sample,
+  product_id: Product.all.sample.id,
+  user_id: User.all.sample.id
+  )
+end
+
+negative_reviews = ["Horrible product","I hate it, I won't buy again"," Bad service","I wouldn't recommend", "The service is terrible", "I disliked the experience"]
+
+30.times do
+review = Review.create(
+  content: negative_reviews.sample,
+  rating: (1..2).to_a.sample,
+  product_id: Product.all.sample.id,
+  user_id: User.all.sample.id
+  )
 end
