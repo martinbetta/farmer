@@ -1,0 +1,5 @@
+meta_product_name: "Organigo"
+meta_title: "Organigo - Eat fresh, local, and responsibly"
+meta_description: "The mission in Organigo is to give the simple access to our customers to the most healthy and fresh products directly from the producer to your home, in order to give a possibility to eat better at a good price and be more responsible to the environment"
+meta_image: "healthy-eating.jpg" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards

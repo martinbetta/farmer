@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
       @subtotal = @current_order.subtotal
     end
   end
+
+  def default_url_options
+  { host: ENV["http://www.organigo.shop/"] || "localhost:3000" }
+end
 end
