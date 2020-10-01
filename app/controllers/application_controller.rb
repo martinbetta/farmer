@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def default_url_options
+    { host: ENV["http://www.organigo.shop"] || "localhost:3000" }
+  end
+  
   def set_order_status_to_new
     @current_order.update(status: "new") if @current_order && @current_order.status != "paid"
   end
