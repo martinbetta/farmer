@@ -11,8 +11,8 @@ const updateOrderItem = (quantityField, id, quantity) => {
     .then(response => response.json())
     .then((data) => {
       quantityField.innerText = `${data.order_item.quantity} ${data.unit}`
-      quantityField.parentNode.nextElementSibling.nextElementSibling.innerText = data.item_total_price
-      document.querySelector('#subtotal').innerText = data.subtotal
+      quantityField.parentNode.nextElementSibling.nextElementSibling.innerText = `€${data.item_total_price}`
+      document.querySelector('#subtotal').innerText = `€${data.subtotal}`
 
     });
 }
@@ -28,7 +28,7 @@ const deleteOrderItem = (item) => {
     .then((res) => res.json())
     .then((data) => {
       parent.remove()
-      document.querySelector('#subtotal').innerText = data.subtotal
+      document.querySelector('#subtotal').innerText = `€${data.subtotal}`
       document.querySelector('#cart-notification').innerText = data.cart_length
     });
 }

@@ -95,7 +95,8 @@ margin-top: 50px;
 
 .vendor-name-index p:hover {
   opacity: 1;
-  color: black;
+  color: $red;
+  border-bottom: 1px solid $red;
 }
 .price-product-index{
   font-size: 14px;
