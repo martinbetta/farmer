@@ -5,6 +5,7 @@ OrderItem.destroy_all
 Product.destroy_all
 Order.destroy_all
 User.destroy_all
+Review.destroy_all
 
 require 'nokogiri'
 require 'open-uri'
@@ -194,7 +195,7 @@ vendor = VendorInfo.create(
 
   p 'winessssssssssssssssssssssssssssssssssssssssssssssssss------------------------------------------------------------------'
   puts 'Creating single vendor '
-  
+
   user = User.create(
     email: "OrgannicGo@gmail.com",
     password: "password",
@@ -242,11 +243,11 @@ vendor = VendorInfo.create(
       p ' '
 
     end
-  
 
 
 
-   # herb and spice 
+
+   # herb and spice
 p 'creating herb and spicessssssssssssssssssssssssssssssssss------------------------------------------------'
 
 user = User.create(
@@ -296,3 +297,28 @@ html_doc.search('.product').first(30).each do |card|
   p ' '
 
 end
+
+positive_reviews = ["Nice product","Very fresh and cheep"," Incredible","I'm not recommend", " Is true, very healthy products", "Correct, no incredible", "I Love Organigo, cheaper and fresh"]
+
+30.times do
+review = Review.create(
+  content: positive_reviews.sample,
+  rating: (3..5).to_a.sample,
+  product_id: Product.all.sample.id,
+  user_id: User.all.sample.id
+  )
+end
+
+negative_reviews = ["Horrible Product","I hate, I won't buy again"," Bad service","I'm not recommend", " Is true, the attention is terrible", "I hate"]
+
+30.times do
+review = Review.create(
+  content: negative_reviews.sample,
+  rating: (1..2).to_a.sample,
+  product_id: Product.all.sample.id,
+  user_id: User.all.sample.id
+  )
+end
+
+
+
