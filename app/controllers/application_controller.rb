@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_current_order_details
-    @current_order = current_user ? Order.find_by(user: current_user, status: "new") : nil
+    @current_order = current_user ? Order.find_by(user: current_user, status: "new") || Order.find_by(user: current_user, status: "paying") : nil
 
     if @current_order
       @subtotal = @current_order.subtotal
