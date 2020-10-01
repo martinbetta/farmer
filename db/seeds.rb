@@ -296,11 +296,11 @@ html_doc.search('.product').first(30).each do |card|
   p ' '
   p ' '
 
-end
+positive_reviews = ["Nice product, awesome quality","Very fresh and cheap"," Incredible","I wouldn't recommend", "Truly very healthy products", "Ok, but nothing fancy", "I Love Organigo, cheap and fresh", "Amazing products, I love it
+I do my shopping every week"]
 
-positive_reviews = ["Nice product","Very fresh and cheep"," Incredible","I'm not recommend", " Is true, very healthy products", "Correct, no incredible", "I Love Organigo, cheaper and fresh"]
+100.times do
 
-30.times do
 review = Review.create(
   content: positive_reviews.sample,
   rating: (3..5).to_a.sample,
@@ -309,7 +309,8 @@ review = Review.create(
   )
 end
 
-negative_reviews = ["Horrible Product","I hate, I won't buy again"," Bad service","I'm not recommend", " Is true, the attention is terrible", "I hate"]
+negative_reviews = ["Horrible product","I hate it, I won't buy again"," Bad service","I wouldn't recommend", "The service is terrible", "I disliked the experience"]
+
 
 30.times do
 review = Review.create(
@@ -319,6 +320,3 @@ review = Review.create(
   user_id: User.all.sample.id
   )
 end
-
-
-
