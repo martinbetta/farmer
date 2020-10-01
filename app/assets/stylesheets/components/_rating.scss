@@ -1,8 +1,12 @@
 .show-rate-box .rate-stars-box {
-    font-size: 18px
+    font-size: 18px;
+    min-width: 120px;
 }
 
-.rate-stars-box {
-    font-size: 12px;
-}
-
+.container-name-stars {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-name-stars > div {
+    line-height: 40px ;
+  }
