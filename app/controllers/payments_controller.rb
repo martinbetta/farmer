@@ -1,7 +1,12 @@
 class PaymentsController < ApplicationController
+  before_action :set_order_to_paying
 
-    def new
-        @order = current_user.orders.where(status: 'paying').find(params[:order_id])
-    end
-    
+  def new
+  end
+
+  private
+
+  def set_order_to_paying
+    @current_order.update(status: 'paying')
+  end
 end

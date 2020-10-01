@@ -47,7 +47,7 @@
                       <div class="dropdown-item" data-id="<%= item.id %>">
                         <div class="d-flex align-items-center justify-content-between">
                           <div class="d-flex" style="flex: 4;">
-                            <button class="btn btn-success quantity-sub">
+                            <button class="btn btn-success quantity-sub" style="background-color: #729D3A; border-color: #729D3A;">
                               <i class="fas fa-minus"></i>
                             </button>
 
@@ -56,7 +56,7 @@
                               <%= item.product.unit %>
                             </div>
 
-                            <button class="btn btn-success quantity-add">
+                            <button class="btn btn-success quantity-add" style="background-color: #729D3A; border-color: #729D3A;">
                               <i class="fas fa-plus"></i>
                             </button>
                           </div>
@@ -67,7 +67,7 @@
 
 
                           <div class="ml-3" style="flex: 2;">
-                            <%= item.total_price %>
+                            €<%= item.total_price %>
                           </div>
 
                           <button class="btn btn-danger delete-item">
@@ -79,7 +79,7 @@
                     <div class="dropdown-divider"></div>
                       <div class="total-price d-flex align-items-center justify-content-between">
                         <div class="font-weight-bold" style="padding: 0.25rem 1.5rem;">Total price:</div>
-                        <div class="font-weight-bold" id="subtotal" style="padding: 0.25rem 1.5rem;"><%= @subtotal %></div>
+                        <div class="font-weight-bold" id="subtotal" style="padding: 0.25rem 1.5rem;">€<%= @subtotal %></div>
                       </div>
 
                       <%= simple_form_for @current_order do |f| %>
