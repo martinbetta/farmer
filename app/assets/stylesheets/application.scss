@@ -27,3 +27,11 @@ body::-webkit-scrollbar {
     background-color: $red;
     outline: 1px solid slategrey;
   }
+
+  body {
+    background-color: white !important;
+  }
+
+  .product-card {
+    margin: 20px;
+  }
