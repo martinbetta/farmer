@@ -71,8 +71,14 @@
         outline:none;
     }
 }
+.search-banner > .fas {
+    color: white;
+    font-size: 20px;
+}
 
-
+.icon-banner-loc {
+    color: $red;
+}
 /*  Second banner*/
 
 .secondary-banner {
