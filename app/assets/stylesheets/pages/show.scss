@@ -133,6 +133,7 @@
   margin-bottom: 0px
 }
 
+
 //-----------------------------------------------------
 .add-to-cart{
   width: 100%;
@@ -143,12 +144,7 @@
 .add-to-cart:hover {
   color: white;
 }
-.def-number-input{
-  display: flex;
-  margin: 0 auto;
 
-
-}
 .quantity-container h5{
   margin-top: 20px;
 }
@@ -167,11 +163,10 @@
 -webkit-appearance: none;
 }
 
-.fa-plus-circle {
+.btn-plus {
   font-size: 35px;
   color: #729d39;
-  position: absolute;
-  top: 0;
+  border: none;
 }
 
 .btn {
@@ -184,44 +179,35 @@
 .fa-minus-circle {
   font-size: 35px;
   color: #729d39;
-  margin-bottom: 3px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .btns-input {
   display: flex;
-  position: relative;
   margin: 0 auto;
+  line-height: 50px;
+  width: 200px;
 }
 
 .input-space {
-  width: 40px;
   font-weight: bold;
-  margin-left: 5px;
-  margin-right: 0px;
+  padding-top: 15px;
 }
-
-
-.number-input.number-input {
-width: 12rem;
-// padding: 2px;
-}
-
 
 .number-input.number-input input[type=number] {
-// max-width: 45px;
-// padding: 1rem;
-font-size: 16px;
-// height: 35px;
 font-weight: bold;
 color: $red;
 border: none;
-background-color: #fafcfb;
-margin-left: 9px
+background-color: #4d4d4d;
 }
-
+#order_item_quantity {
+  color:$red;
+  width: 45px;
+}
+#order_item_quantity::-webkit-outer-spin-button,
+#order_item_quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 //----------------------------------------------MAPBOX
 
