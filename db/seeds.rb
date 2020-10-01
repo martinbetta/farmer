@@ -50,13 +50,13 @@ html_doc.search('.product').first(30).each do |card|
   p "creating description"
   desc = html_doc_desc.search('.woocommerce-product-details__short-description > p').text
   p desc
-  p "creating first product"
+  p "creating product"
   product = Product.new(
     name: title,
     description: desc,
     category: "fruits",
     unit_price: rand(3..5),
-    unit: "loaf",
+    unit: "kg",
     image_url: image,
     user: user
     )
@@ -117,7 +117,7 @@ html_doc.search('.product').first(30).each do |card|
     description: desc,
     category: "vegetables",
     unit_price: rand(3..5),
-    unit: "loaf",
+    unit: "kg",
     image_url: image,
     user: user
     )
@@ -286,8 +286,8 @@ html_doc.search('.product').first(30).each do |card|
     name: title,
     description: desc,
     category: "vegetable",
-    unit_price: rand(3..5),
-    unit: "loaf",
+    unit_price: rand(1..3),
+    unit: "gr",
     image_url: image,
     user: user
     )
