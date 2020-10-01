@@ -1,12 +1,27 @@
 <div class="container">
   <div class="row py-4">
     <div class="col">
-      <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.status %></span></small></h1>
-      <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
-        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.total_price %></li>
-      </ul>
-      <p>Estimated delivery in <strong>2 business days</strong></p>
+      <div class="img-header-container">
+        <div class="pay-img-header">
+          <div class="payment-img">
+          </div>
+          <h2><strong>Payment submitted</strong></h2>
+          <h5>A confirmation e-mail will be sent to you shortly</h5>       
+        </div>
+        <div class="pay-info">
+          <h2><strong>Congratulations!</strong></h2>
+          <h5>You are one step away from enyoing organigo's fresh and local products</h5>
+          <div class="id-date-box d-flex justify-content-center">
+            <h5>Order Id: <strong><%= @order.id %></strong></h5>&emsp;&emsp;
+            <h5>Issued on: <strong><%= @order.created_at.to_date %></strong></h5>
+          </div>
+          <h5>Total price: <strong><%= humanized_money_with_symbol @order.total_price %></strong></h5><br>
+          <h6>Estimated delivery in <strong>2 business days</strong></h6>
+          <h6>Delivery address: <strong><%= @order.user.address %></strong></h6>
+        </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>

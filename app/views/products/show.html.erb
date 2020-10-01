@@ -13,6 +13,9 @@
           </div>
         </div>
         <h6><%= @product.user.address %></h6>
+        <div class="price-container d-flex">
+          <h5>€ <%= @product.unit_price %> x <%= @product.unit %></h5>
+        </div>
       </div>
 
       <div class="description-container">
@@ -20,12 +23,9 @@
       </div>
 
       <div class="third-row">
-        <div class="price-container d-flex">
-          <h5>€ <%= @product.unit_price %> x <%= @product.unit %></h5>
-        </div>
+
 
         <div class="quantity-container">
-          <h5><strong>Qty</strong></h5>
           <%= simple_form_for [@product, @order_item], authenticity_token: true, remote: true do |f| %>
             <div class="def-number-input number-input">
               <div class="btns-input">
@@ -34,7 +34,7 @@
                 <button onclick="this.parentNode.querySelector('input[type=number]').stepUp();  return false;" class="btn btn-lg plus"><i class="fas fa-plus-circle"></i></button>
               </div>
             </div>
-            <%= f.button :submit, 'Add to cart', class:"add-to-cart"%>
+            <%= f.button :submit, 'Add to cart', class:"add-to-cart btn-show-add"%>
           <% end %>
         </div>
       </div>
