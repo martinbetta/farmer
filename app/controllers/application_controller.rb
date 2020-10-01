@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def default_url_options
-    { host: ENV["http://www.organigo.shop"] || "localhost:3000" }
+    { host: "http://www.organigo.shop" || "localhost:3000" }
   end
   
   def set_order_status_to_new
