@@ -29,14 +29,11 @@
               <div class="product-image" style="background-image: url(<%= product.image_url %>)">
               </div>
               <div class="product-info">
-                <div class="name-rate-box">
                   <div class="name-box">
                     <h4 class="bold-title"> <%= product.name %> </h4>
-                  </div>
-                  <div class="rate-box index-stars">
                     <%= render "products/rating", avg_score: product.avg_score %>
                   </div>
-                </div>
+ 
                 <div class="price-unit-cat-box">
                   <h6 class="price-product-index">€ <%= product.unit_price %> / <%= product.unit %> - <%= product.category %></h6>
                 </div>
