@@ -5,13 +5,8 @@
 .rate-stars-box {
     font-size: 12px;
 }
-
-
-}
-
-
-
-    min-width: 120px;
+.fa-star:before {
+  color: #729D39;
 }
 
 .container-name-stars {
@@ -23,6 +18,7 @@
   }
 .index-stars .fa-star {
 font-size: 12px;
+color: #729D39
   }
   .container-producer-name-rating{
     display: flex;
