@@ -10,20 +10,21 @@
             <th style="width:20%">Price</th>
             <th style="width:10%">Subtotal</th>
           </tr>
-          <% @order.order_items.each do |item| %>
+          <% @current_order.order_items.each do |item| %>
           <tr>
             <td style="overflow-x: hidden; text-overflow: ellipsis;"><%= item.product.name %></td>
             <td><%= item.quantity %></td>
             <td><%= item.product.unit %></td>
             <td>€<%= item.product.unit_price %></td>
-            <td>€<%= item.total_price.to_f %></td>
+            <td>€<%= item.total_price %></td>
           <% end %>
           <tr style="border-top: 1px solid;">
             <th style="width:35%;">Total</th>
             <th style="width:15%"></th>
             <th style="width:20%"></th>
             <th style="width:20%"></th>
-            <th style="width:10%">€<%= @subtotal%></th>
+
+            <th style="width:10%">€<%= @current_order.subtotal %></th>
           </tr>
         </table>
       </div>
@@ -35,7 +36,7 @@
         paymentButton.addEventListener('click', () => {
           const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
           stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
+            sessionId: '<%= @current_order.checkout_session_id %>'
           });
         });
       </script>

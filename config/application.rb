@@ -14,7 +14,6 @@ module Farmer
       generate.test_framework :test_unit, fixture: false
     end
 
-    config.hosts << " efd6e8c6b939.ngrok.io"
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 

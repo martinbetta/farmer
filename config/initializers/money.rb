@@ -7,6 +7,7 @@ MoneyRails.configure do |config|
   # config.default_currency = :usd
 
   Money.infinite_precision = false
+  config.no_cents_if_whole = false
 
   # Set default bank object
   #
