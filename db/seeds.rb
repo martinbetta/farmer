@@ -296,6 +296,9 @@ html_doc.search('.product').first(30).each do |card|
   p ' '
   p ' '
 
+end
+
+
 positive_reviews = ["Nice product, awesome quality","Very fresh and cheap"," Incredible","I wouldn't recommend", "Truly very healthy products", "Ok, but nothing fancy", "I Love Organigo, cheap and fresh", "Amazing products, I love it
 I do my shopping every week"]
 
