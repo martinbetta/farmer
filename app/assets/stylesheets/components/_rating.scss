@@ -1,5 +1,11 @@
-.show-rate-box .rate-stars-box {
-  font-size: 18px;
+.show-rate-box > .fas {
+  font-size: 20px;
+}
+.show-rate-box .text-muted:before {
+  font-size: 20px;
+}
+.show-rate-box .fas:before {
+  font-size: 20px;
 }
 
 .rate-stars-box {
@@ -11,24 +17,24 @@
 }
 
 .container-name-stars {
-    display: flex;
-    justify-content: space-between;
-  }
+  display: flex;
+  justify-content: space-between;
+}
 
-  .container-name-stars > div {
-    line-height: 40px ;
-  }
+.container-name-stars > div {
+  line-height: 40px ;
+}
 .index-stars .fa-star {
-font-size: 12px;
-color: #729D39
-  }
-  .container-producer-name-rating{
-    display: flex;
-    justify-content: space-between;
-  }
-  .container-producer-name-rating > div {
-    line-height: 40px;
-  }
+  font-size: 12px;
+  color: #729D39
+}
+.container-producer-name-rating{
+  display: flex;
+  justify-content: space-between;
+}
+.container-producer-name-rating > div {
+  line-height: 40px;
+}
 
 
 .container-name-stars > div {

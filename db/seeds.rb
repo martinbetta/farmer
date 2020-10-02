@@ -51,13 +51,6 @@ html_doc.search('.product').first(30).each do |card|
   p "creating description"
   desc = html_doc_desc.search('.woocommerce-product-details__short-description > p').text
   p desc
-  if desc == ""
-    desc = 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), 
-    and antioxidants. Although fresh fruits are subject to spoilage, 
-    their shelf life can be extended by refrigeration or by the removal of oxygen 
-    from their storage or packaging containers. Fruits can be processed into juices, jams, 
-    and jellies and preserved by dehydration, canning, fermentation, and pickling. '
-  end
   p "creating product"
   product = Product.new(
     name: title,
@@ -119,12 +112,6 @@ html_doc.search('.product').first(30).each do |card|
   p image
   p "creating description"
   desc = html_doc_desc.search('.woocommerce-product-details__short-description > p').text
-  if desc == ""
-    desc = 'Vegetable are important sources of dietary fibre, vitamins (especially vitamin C), 
-    and antioxidants. Although fresh vegetable are subject to spoilage, 
-    their shelf life can be extended by refrigeration or by the removal of oxygen 
-    from their storage or packaging containers.'
-  end
   p desc
 
   p "creating product"
