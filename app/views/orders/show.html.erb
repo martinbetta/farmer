@@ -15,7 +15,7 @@
             <h5>Order Id: <strong><%= @order.id %></strong></h5>&emsp;&emsp;
             <h5>Issued on: <strong><%= @order.created_at.to_date %></strong></h5>
           </div>
-          <h5>Total price: <strong><%= humanized_money_with_symbol @order.total_price %></strong></h5><br>
+          <h5>Total price: <strong><%= @order.subtotal %></strong></h5><br>
           <h6>Estimated delivery in <strong>2 business days</strong></h6>
           <h6>Delivery address: <strong><%= @order.user.address %></strong></h6>
         </div>
