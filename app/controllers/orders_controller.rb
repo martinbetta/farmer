@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
     order = Order.find params[:id]
     session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
+        locale: "en",
         line_items: order.order_items.map { |order_item|
             {
                 name: order_item.product.name,
