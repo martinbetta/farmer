@@ -3,6 +3,10 @@
 }
 
 .rate-stars-box {
+    font-size: 12px;
+}
+.fa-star:before {
+  color: #729D39;
   font-size: 12px;
 }
 
@@ -14,6 +18,18 @@
   .container-name-stars > div {
     line-height: 40px ;
   }
+.index-stars .fa-star {
+font-size: 12px;
+color: #729D39
+  }
+  .container-producer-name-rating{
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-producer-name-rating > div {
+    line-height: 40px;
+  }
+
 
 .container-name-stars > div {
   line-height: 40px;
