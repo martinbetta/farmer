@@ -51,6 +51,13 @@ html_doc.search('.product').first(30).each do |card|
   p "creating description"
   desc = html_doc_desc.search('.woocommerce-product-details__short-description > p').text
   p desc
+  if desc == ""
+    desc = 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), 
+    and antioxidants. Although fresh fruits are subject to spoilage, 
+    their shelf life can be extended by refrigeration or by the removal of oxygen 
+    from their storage or packaging containers. Fruits can be processed into juices, jams, 
+    and jellies and preserved by dehydration, canning, fermentation, and pickling. '
+  end
   p "creating product"
   product = Product.new(
     name: title,
@@ -62,8 +69,9 @@ html_doc.search('.product').first(30).each do |card|
     user: user
     )
   product.save
-  p ' '
-  p ' '
+  p '-----------------------------------------------------------------------------------------------------------------------'
+
+  p '-----------------------------------------------------------------------------------------------------------------------'
 end
 
 
@@ -111,8 +119,15 @@ html_doc.search('.product').first(30).each do |card|
   p image
   p "creating description"
   desc = html_doc_desc.search('.woocommerce-product-details__short-description > p').text
+  if desc == ""
+    desc = 'Vegetable are important sources of dietary fibre, vitamins (especially vitamin C), 
+    and antioxidants. Although fresh vegetable are subject to spoilage, 
+    their shelf life can be extended by refrigeration or by the removal of oxygen 
+    from their storage or packaging containers.'
+  end
   p desc
-  p "creating first product"
+
+  p "creating product"
   product = Product.new(
     name: title,
     description: desc,
@@ -123,9 +138,9 @@ html_doc.search('.product').first(30).each do |card|
     user: user
     )
   product.save
-  p ' '
-  p ' '
+  p '-----------------------------------------------------------------------------------------------------------------------'
 
+  p '-----------------------------------------------------------------------------------------------------------------------'
 end
 
 
@@ -183,8 +198,8 @@ vendor = VendorInfo.create(
       user: user
       )
     product.save
-    p ' '
-    p ' '
+    p '-----------------------------------------------------------------------------------------------------------------------'
+    p '-----------------------------------------------------------------------------------------------------------------------'
 
   end
 
@@ -239,8 +254,10 @@ vendor = VendorInfo.create(
         user: user
         )
       product.save
-      p ' '
-      p ' '
+      p '-----------------------------------------------------------------------------------------------------------------------'
+
+      p '-----------------------------------------------------------------------------------------------------------------------'
+  
 
     end
 
@@ -282,6 +299,7 @@ html_doc.search('.product').first(30).each do |card|
   p "creating description"
   desc = html_doc_desc.search('.woocommerce-product-details__short-description > p').text
   p desc
+  
   p "creating first product"
   product = Product.new(
     name: title,
@@ -293,8 +311,9 @@ html_doc.search('.product').first(30).each do |card|
     user: user
     )
   product.save
-  p ' '
-  p ' '
+  p '-----------------------------------------------------------------------------------------------------------------------'
+
+  p '-----------------------------------------------------------------------------------------------------------------------'
 
 end
 
@@ -302,7 +321,7 @@ end
 positive_reviews = ["Nice product, awesome quality","Very fresh and cheap"," Incredible","I wouldn't recommend", "Truly very healthy products", "Ok, but nothing fancy", "I Love Organigo, cheap and fresh", "Amazing products, I love it
 I do my shopping every week"]
 
-100.times do
+150.times do
 
 review = Review.create(
   content: positive_reviews.sample,
@@ -315,7 +334,7 @@ end
 negative_reviews = ["Horrible product","I hate it, I won't buy again"," Bad service","I wouldn't recommend", "The service is terrible", "I disliked the experience"]
 
 
-30.times do
+10.times do
 review = Review.create(
   content: negative_reviews.sample,
   rating: (1..2).to_a.sample,
