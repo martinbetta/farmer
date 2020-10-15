@@ -1,9 +1,6 @@
 <div class="container">
-
-
   <div class="orders-container">
     <h4><strong>My orders </strong> (<%= @orders.count %>)</h4>
-
     <% @orders.each do |order| %>
       <div type="button" class="collapsible">
         <div class="order-headers">
@@ -18,7 +15,6 @@
           </div>
         </div>
       </div>
-
       <div class="content">
         <div class="card-product">
           <% order.order_items.each do |i|  %>
@@ -35,6 +31,5 @@
         </div>
       </div>
     <% end %>
-
   </div>
 </div>

@@ -3,7 +3,6 @@
         <div class="banner-text">
             <h1>Eat fresh, local, and responsibly.</h1>
             <p>Join us and buy directly from producers near you.</p>
-
             <%= link_to products_path, class: 'link-block' do %>
                 <div class='see-all-products-btn'>See all products</div>
             <% end %>
@@ -21,8 +20,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="container slick-container">
     <div class="items">
         <% Product::CATEGORIES.each do |category|  %>
@@ -35,7 +32,6 @@
         <% end %>
     </div>
 </div>
-
 <div class="secondary-banner">
     <div class="secondary-banner-img"></div>
     <div class="secondary-banner-text">
@@ -47,7 +43,6 @@
         <%= link_to "Start shopping", products_path, class: "start-shopping-btn" %>
     </div>
 </div>
-
 <div class="container cont-label">
     <div class="card-label">
         <div class="label"><i class="fas fa-seedling"></i></div>
