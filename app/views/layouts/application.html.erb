@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Organigo | Eat fresh, local, and responsibly</title>
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css2?family=Sree+Krushnadevaraya&display=swap" rel="stylesheet">
@@ -30,8 +29,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
      <!-- ----------Favicon---- -->
-     <meta name="description" content="<%= meta_description %>">
-
+    <meta name="description" content="<%= meta_description %>">
     <!-- Facebook Open Graph data -->
     <meta property="og:title" content="<%= meta_title %>" />
     <meta property="og:type" content="website" />
@@ -39,7 +37,6 @@
     <meta property="og:image" content="<%= meta_image %>" />
     <meta property="og:description" content="<%= meta_description %>" />
     <meta property="og:site_name" content="<%= meta_title %>" />
-
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
@@ -47,11 +44,7 @@
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
-
-
-
   </head>
-
   <body data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     <div class="nav1">
       <div class="container">
@@ -71,7 +64,7 @@
               <path d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562" transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"></path>
             </symbol>
           </svg>
-        <div class="btn-container">
+          <div class="btn-container">
           <% if current_user %>
             <p class="dashboard"><%= link_to "Dashboard", dashboard_path %></p>
             <p class="sign-out-btn"><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %> </p>
@@ -80,9 +73,7 @@
                 <button class="btn btn-secondary dropdown-toggle bg-transparent border-0 py-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-shopping-cart"></i>
                   <a href="#" id="cart-notification" class="badge badge-danger cart-number"><%= @current_order.order_items.length %></a>
-
                 </button>
-
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="width: 450px; background-color: #FAFCFB; border-radius: 5px;">
                     <% @current_order.order_items.each do |item| %>
                       <div class="dropdown-item" data-id="<%= item.id %>">
@@ -91,26 +82,20 @@
                             <button class="btn btn-success quantity-sub" style="background-color: #FAFCFB; border-color: #729D3A; color: #729D3A;">
                               <i class="fas fa-minus"></i>
                             </button>
-
                             <div class="quantity-for-item d-flex align-items-center justify-content-center" style="width: 60px;">
                               <%= item.quantity %>
                               <%= item.product.unit %>
                             </div>
-
                             <button class="btn btn-success quantity-add" style="background-color: #FAFCFB; border-color: #729D3A; color: #729D3A;">
                               <i class="fas fa-plus"></i>
                             </button>
                           </div>
-
                           <div style="flex: 2; overflow-x: hidden; text-overflow: ellipsis;">
                             <%= item.product.name %>
                           </div>
-
-
                           <div class="ml-3" style="flex: 2;">
                             €<%= item.total_price %>
                           </div>
-
                           <button class="btn btn-danger delete-item" style="background-color: #FAFCFB; color: #f7956a">
                             <i class="fas fa-trash"></i>
                           </button>
@@ -122,7 +107,6 @@
                         <div class="font-weight-bold" style="padding: 0.25rem 1.5rem;">Total price</div>
                         <div class="font-weight-bold" id="subtotal" style="padding: 0.25rem 1.5rem;">€<%= @subtotal %></div>
                       </div>
-
                       <%= simple_form_for @current_order do |f| %>
                         <div style="padding: 0.25rem 1.5rem;">
                           <%= f.submit "Checkout", class: 'btn btn-checkout' %>
@@ -140,8 +124,6 @@
       </div>
     </div>
     <%= yield %>
-
     <%= render 'shared/footer' %>
-
   </body>
 </html>

@@ -1,9 +1,6 @@
 <div class="container">
-
   <div class="product-container">
-    <div class="img-container" style="background-image: url(<%= @product.image_url %>)">
-    </div>
-
+    <div class="img-container" style="background-image: url(<%= @product.image_url %>)"></div>
     <div class="info-container">
       <div class="first-row">
         <div class="container-name-stars">
@@ -17,14 +14,10 @@
           <h5>€ <%= @product.unit_price %> x <%= @product.unit %></h5>
         </div>
       </div>
-
       <div class="description-container">
         <p><%= @product.description %></p>
       </div>
-
       <div class="third-row">
-
-
         <div class="quantity-container">
           <%= simple_form_for [@product, @order_item], authenticity_token: true, remote: true do |f| %>
            <div class="container-plus-and-minus">
@@ -39,9 +32,7 @@
         </div>
       </div>
     </div>
-
   </div>
-
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="vendor-tab" data-toggle="tab" href="#vendor" role="tab" aria-controls="vendor" aria-selected="true">Producer</a>
@@ -50,16 +41,12 @@
       <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews" aria-selected="false">Reviews</a>
     </li>
   </ul>
-
-
   <div class="tab-content" id="myTabContent">
     <div class="tab-pane show active" style="margin-top: 20px" id="vendor" role="tabpanel" aria-labelledby="vendor-tab">
-
       <div class="producer-container d-flex">
         <div class="producer-img-container">
-            <%=  image_tag(@vendor.image_url) %>
+          <%=  image_tag(@vendor.image_url) %>
         </div>
-
         <div class="vendor-info" style="margin-left: 40px">
           <div class="container-producer-name-rating">
             <h2><strong><%= @vendor.company_name %></strong></h2>
@@ -68,18 +55,15 @@
           <h6><%= @vendor.description %></h6>
         </div>
       </div>
-
       <!------------------ GEO MAP -------------------->
       <div id="map"
         style="width: 100%; height: 350px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-
       <div class="more-products text-center">
         <h1>More from <strong class="color-vendor"><%= @vendor.company_name %></strong></h1>
       </div>
-
       <div class="col-12 p-0">
         <div class="grid-show">
           <%# ------product card render-------- %>
@@ -89,10 +73,8 @@
     </div>
     <div></div>
     <div class="tab-pane" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-
     <div type="button" id= "review-collapsible" class="collapsible">
       <div class="order-headers">
-
         <div class="order-info-headers-box">
           <p> <i class="fas fa-plus"> </i> Review this product</p>
         </div>
