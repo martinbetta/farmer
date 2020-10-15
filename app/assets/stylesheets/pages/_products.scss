@@ -1,5 +1,4 @@
 .filters-container {
-  height: 40px;
   display: flex;
   align-items: center;
   a{
@@ -7,11 +6,10 @@
   }
 }
 
-.filter-badge{
+.filter-badge {
   background-color: $red;
   color:white;
 }
-
 
 .bold-title {
   color: black;
@@ -33,29 +31,24 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+  }
 }
-.grid-cat a {
-  text-decoration: none;
-}
-
 
 .category-card-sidebar {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-size: cover;
   background-position: center;
-  border:  solid #f2f2f2;
-  margin: 0 auto;
   transition-duration: 500ms;
-    &:hover {
-      box-shadow: 0px 1px 30px rgba(0,0,0,0.1);
-    }
 }
 
 .category-name {
   font-size: 12px;
-  text-align: center;
-  padding: 5px;
+  font-weight: 400;
+  padding-top: 5px;
   color: black;
   margin-bottom: 0;
   a {
@@ -63,23 +56,11 @@
   }
 }
 
-.title-index-category{
-  text-align: right;
-   position: absolute;
-  margin-left: 725px;
+.index_producer {
+  margin-top: 50px;
 }
 
-
-.text-butt-allcatego{
-    text-decoration: none;
-    color: white;
-}
-.index_producer{
-margin-top: 50px;
-
-}
-
-.vendor-name-index p{
+.vendor-name-index p {
   text-decoration: none;
   color:black;
   border-bottom: 1px solid rgb(138, 138, 138);
@@ -98,6 +79,7 @@ margin-top: 50px;
   color: $red;
   border-bottom: 1px solid $red;
 }
+
 .price-product-index{
   font-size: 14px;
    text-decoration: none;
@@ -105,7 +87,6 @@ margin-top: 50px;
    font-style: bold;
 }
 
-//------------------------------ price filter
 .location-input {
   width: 100%;
   position: relative
@@ -120,49 +101,27 @@ margin-top: 50px;
 .location-input::placeholder {
   color: rgba(0, 0, 0, 0.563);
 }
-.search-btn {
-  background-color: $red;
-  border-radius: 5px;
-  color: white;
-  border-style: none;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 0px
-}
-
-.boxbox {
-  position:relative
-}
 
 .current-location {
-  padding-left: 0px
-}
-
-.current-location:hover {
-  color: $orange
+  padding-left: 0px;
+  &hover {
+    color: $orange
+  }
 }
 
 .index_location {
   margin-bottom: 35px;
-}
-
-.index_location h4{
-  margin-bottom: 10px
-}
-
-.slidecontainer {
-  margin-top: 5px
-}
-
-#btn-current {
-  width: 30px;
+  h4 {
+    margin-bottom: 10px
+  }
 }
 
 //--------------------cards
+
 .product-info {
   padding: 4px
 }
+
 .name-rate-box {
   display: flex;
   position: relative
@@ -174,10 +133,9 @@ margin-top: 50px;
 }
 
 .price-unit-cat-box {
-display: flex;
+  display: flex;
 }
 
-
-.category-name-small{
+.category-name-small {
   color: grey
 }

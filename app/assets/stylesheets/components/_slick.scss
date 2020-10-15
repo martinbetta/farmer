@@ -1,10 +1,9 @@
 .slick-container {
     padding: 90px 0px;
     height: 300px;
-}
-
-.slick-container p {
-    color: $red;
+    p {  
+        color: $red;
+    }
 }
 
 .slick-prev:before {
@@ -28,7 +27,6 @@
     background-size: cover;
     background-position: center;
     outline: none;
-
 }
 
 .icon {
@@ -36,7 +34,7 @@
     &:focus {
         outline: none;
     }
-}
-.icon:hover {
-    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
 }
