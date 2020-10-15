@@ -2,7 +2,6 @@
 .nav1 > .container {
   display: flex;
   justify-content: space-between;
-
 }
 
 .nav1 {
@@ -22,13 +21,16 @@
   font-weight: bold;
   letter-spacing: -3px;
 }
+
 .btn-container {
   display: flex;
 }
+
 .btn-container p  {
   line-height: 70px;
   margin: 0 10px;
 }
+
 .search {
   line-height: 50px;
 }
@@ -44,6 +46,7 @@
   top: 15px !important;
   right: 15px !important;
 }
+
 .fa-shopping-cart {
   font-size: 20px;
   position: relative;
