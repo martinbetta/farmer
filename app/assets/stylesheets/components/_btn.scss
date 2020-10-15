@@ -13,6 +13,7 @@
 .btn-checkout {
    background-color: $red;
    border-radius: 5px;
+   width: 100%;
 }
 
 .start-shopping-btn, 
@@ -69,3 +70,14 @@
 .btn-show-add {
     margin-top: 10px !important;
 }
+
+.search-btn {
+    background-color: $red;
+    border-radius: 5px;
+    color: white;
+    border-style: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0px
+  }
