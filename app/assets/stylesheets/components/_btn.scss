@@ -1,83 +1,71 @@
-
-
-/* NAV BTN */
-
-.sign-in-btn a,
-.sign-up-btn a,
-.sign-out-btn a,
-
-.dashboard a {
+.dashboard a, 
+.sign-in-btn a, 
+.sign-up-btn a, 
+.sign-out-btn a {
     color: black;
     font-weight: bold;
     text-decoration: none;
 }
 
+.see-all-products-btn,
+.add-to-cart,
+.button-all-products,
+.btn-checkout {
+   background-color: $red;
+   border-radius: 5px;
+}
+
+.start-shopping-btn, 
+.btn-checkout, 
+.add-to-cart, 
+.see-all-products-btn {
+    color: white;
+}
+
+.start-shopping-btn:hover, 
+.btn-checkout:hover, 
 .see-all-products:hover {
-    color:  white ;
+    color:white ;
 }
 
 .see-all-products-btn {
     line-height: 50px;
     font-weight: bold;
-    color: white ;
     font-size: 20px;
     letter-spacing: 2px;
     margin-top: 70px;
-    background-color:$red;
     width: 600px;
     height: 50px;
     text-align: center;
-    border-radius: 5px;
-
 }
+
 .link-block:hover{
     text-decoration: none;
 }
+
 .add-to-cart {
-    background-color:$red;
-    border-radius: 14px;
-    color: white;
+    border-radius: 5px;
     width: 200px;
     height: 45px;
 }
 
-
-.button-all-products {
-    background-color: $red;
-    border-radius: 5px;
-    margin-top: 15px;
-    font-weight: bold;
-    width:100%;
-}
-
-.btn-checkout{
-  background-color: $red;
-  border-radius: 5px;
+.btn-checkout {
   padding: 12px 16px;
-  color: white;
   text-align: center;
   width: 100%;
   font-size: 20px;
   letter-spacing: 2px;
 }
-.btn-checkout:hover {
-    color: white;
-}
-
 
 .start-shopping-btn {
     border: 3px solid  white;
-    color: white;
     padding: 10px 15px;
     line-height: 100px;
     font-weight: bold;
     font-size: 20px;
-    letter-spacing: 1px;
-    border-radius: 5px;
+    letter-spacing: 2px;
 }
-.start-shopping-btn:hover {
-    color:white ;
-}
+
 .btn-show-add {
     margin-top: 10px !important;
 }
